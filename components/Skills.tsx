@@ -120,34 +120,36 @@ function Skills() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {skillCategories.map((category, index) => (
-            <motion.div key={index} variants={cardVariants}>
+            <motion.div key={index} variants={cardVariants} className="h-full">
               <motion.div
-                whileHover={{
+                whileHover={shouldReduceMotion ? {} : {
                   y: -10,
                   rotateY: 5,
                   boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
                 }}
                 transition={{ type: 'spring' as const, stiffness: 300, damping: 20 }}
+                style={{ willChange: shouldReduceMotion ? 'auto' : 'transform' }}
+                className="h-full"
               >
-                <Card className="hover:shadow-lg transition-shadow h-full">
-              <CardHeader>
-                <CardTitle className="text-primary">{category.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <li
-                      key={skillIndex}
-                      className="text-foreground flex items-center"
-                    >
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-            </motion.div>
+                <Card className="hover:shadow-lg transition-shadow h-full flex flex-col">
+                  <CardHeader className="flex-shrink-0">
+                    <CardTitle className="text-primary">{category.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1 flex flex-col">
+                    <ul className="space-y-2 flex-1">
+                      {category.skills.map((skill, skillIndex) => (
+                        <li
+                          key={skillIndex}
+                          className="text-foreground flex items-center"
+                        >
+                          <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></span>
+                          <span className="flex-1">{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>

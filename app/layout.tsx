@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: 'Saifeddine Makhlouf - Fullstack React Native Developer',
     description: 'Full-Stack React Native Developer with 6 years of experience. Expert in cross-platform mobile app development.',
     images: ['/og-image.jpg'],
-    creator: '@devmksaif',
+    creator: '@Seifeddine22216',
   },
   robots: {
     index: true,

@@ -52,8 +52,8 @@ export default function Home() {
           siteName: 'Saifeddine Makhlouf Portfolio',
         }}
         twitter={{
-          handle: '@devmksaif',
-          site: '@devmksaif',
+          handle: '@Seifeddine22216',
+          site: '@Seifeddine22216',
           cardType: 'summary_large_image',
         }}
       />

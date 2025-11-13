@@ -1,9 +1,15 @@
 'use client'
 
 import { NextSeo } from 'next-seo'
-import Blog from '@/components/Blog'
+import dynamic from 'next/dynamic'
 import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+
+const Blog = dynamic(() => import('@/components/Blog'), {
+  loading: () => <div className="min-h-[400px]" />,
+})
+const Footer = dynamic(() => import('@/components/Footer'), {
+  loading: () => <div className="min-h-[200px]" />,
+})
 
 export default function BlogPage() {
   return (
