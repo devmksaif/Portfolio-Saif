@@ -1,8 +1,6 @@
 'use client'
 
-import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 import Hero from '@/components/Hero'
 import Navigation from '@/components/Navigation'
 
@@ -31,33 +29,7 @@ const Footer = dynamic(() => import('@/components/Footer'), {
 
 export default function Home() {
   return (
-    <>
-      <NextSeo
-        title="Home"
-        description="Portfolio of Saifeddine Makhlouf - Fullstack React Native Developer with 6 years of experience in mobile and web development. Expert in React Native, Node.js, TypeScript, MongoDB, PostgreSQL, and modern web technologies."
-        canonical="https://saifeddine-portfolio.vercel.app"
-        openGraph={{
-          url: 'https://saifeddine-portfolio.vercel.app',
-          title: 'Saifeddine Makhlouf - Fullstack React Native Developer',
-          description:
-            'Portfolio of Saifeddine Makhlouf - Fullstack React Native Developer with 6 years of experience in mobile and web development.',
-          images: [
-            {
-              url: 'https://saifeddine-portfolio.vercel.app/me.jpg',
-              width: 1200,
-              height: 630,
-              alt: 'Saifeddine Makhlouf - Fullstack React Native Developer Portfolio',
-            },
-          ],
-          siteName: 'Saifeddine Makhlouf Portfolio',
-        }}
-        twitter={{
-          handle: '@Seifeddine22216',
-          site: '@Seifeddine22216',
-          cardType: 'summary_large_image',
-        }}
-      />
-      <main className="min-h-screen">
+    <main className="min-h-screen">
         <Navigation />
         <Hero />
         <About />
@@ -68,7 +40,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-    </>
   )
 }
 

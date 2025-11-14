@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { Poppins } from 'next/font/google'
-import SEO from '@/components/SEO'
 import './globals.css'
 
 const poppins = Poppins({
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
     siteName: 'Saifeddine Makhlouf Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/me.jpg',
         width: 1200,
         height: 630,
         alt: 'Saifeddine Makhlouf - Fullstack React Native Developer',
@@ -76,7 +75,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Saifeddine Makhlouf - Fullstack React Native Developer',
     description: 'Full-Stack React Native Developer with 6 years of experience. Expert in cross-platform mobile app development.',
-    images: ['/og-image.jpg'],
+    images: ['/me.jpg'],
     creator: '@Seifeddine22216',
   },
   robots: {
@@ -114,7 +113,6 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={`${poppins.variable} font-sans`}>
-        <SEO />
         {children}
       </body>
     </html>

@@ -1,6 +1,4 @@
-'use client'
-
-import { NextSeo } from 'next-seo'
+import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowLeft } from 'lucide-react'
@@ -265,6 +263,47 @@ Follow these best practices for successful app store deployments.
   },
 ]
 
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }))
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = blogPosts.find((p) => p.slug === params.slug)
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The blog post you are looking for does not exist.',
+    }
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: `https://saifeddine-portfolio.vercel.app/blog/${post.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://saifeddine-portfolio.vercel.app/blog/${post.slug}`,
+      type: 'article',
+      siteName: 'Saifeddine Makhlouf Portfolio',
+      publishedTime: post.date,
+      authors: ['Saifeddine Makhlouf'],
+      tags: [post.category],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      creator: '@Seifeddine22216',
+    },
+  }
+}
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((p) => p.slug === params.slug)
 
@@ -288,28 +327,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <NextSeo
-        title={post.title}
-        description={post.excerpt}
-        canonical={`https://saifeddine-portfolio.vercel.app/blog/${post.slug}`}
-        openGraph={{
-          url: `https://saifeddine-portfolio.vercel.app/blog/${post.slug}`,
-          title: post.title,
-          description: post.excerpt,
-          type: 'article',
-          siteName: 'Saifeddine Makhlouf Portfolio',
-          article: {
-            publishedTime: post.date,
-            authors: ['Saifeddine Makhlouf'],
-            tags: [post.category],
-          },
-        }}
-        twitter={{
-          handle: '@Seifeddine22216',
-          site: '@Seifeddine22216',
-          cardType: 'summary_large_image',
-        }}
-      />
       <main className="min-h-screen">
         <Navigation />
         <article className="pt-16 pb-20">
