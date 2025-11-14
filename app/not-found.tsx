@@ -1,7 +1,11 @@
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { Button } from '@/components/ui/button'
 import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+
+const Footer = dynamic(() => import('@/components/Footer'), {
+  ssr: false,
+})
 
 export default function NotFound() {
   return (
