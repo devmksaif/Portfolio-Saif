@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ===== HOME ===== -->
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saifeddine-portfolio.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://saifeddine-portfolio.vercel.app/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saifeddine-portfolio.vercel.app/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saifeddine-portfolio.vercel.app/" />
+    <image:image>
+      <image:loc>https://saifeddine-portfolio.vercel.app/og-cover.png</image:loc>
+      <image:title>Saifeddine Makhlouf — Lead Full-Stack Developer</image:title>
+      <image:caption>Three.js portfolio cover — constellation of project nodes on deep space backdrop.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ===== SECTION DEEP-LINKS (anchors) ===== -->
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#about</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#skills</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#experience</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#projects</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#education</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#contact</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- ===== PROJECT DETAIL ANCHORS ===== -->
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#calliverse</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#blink-delivery</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#craftgent</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#juliabot</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/#acte</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== AUXILIARY PAGES ===== -->
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/sitemap.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saifeddine-portfolio.vercel.app/humans.txt</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

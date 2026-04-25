@@ -1,0 +1,27 @@
+/* TEAM */
+  Lead Full-Stack Developer: Saifeddine Makhlouf
+  Site: https://saifeddine-portfolio.vercel.app/
+  GitHub: @devmksaif
+  Email: saifeddine.ben.makhlouf [at] gmail.com
+  Location: Tunis, Tunisia (UTC+1)
+
+/* THANKS */
+  IEEE — for the AI Challenge that started it all
+  YOTSYSTEM — for trusting me with the wheel
+  Every freelance client who shipped something real
+
+/* SITE */
+  Last update: 2026-04-25
+  Standards: HTML5, CSS3, ES2024, WebGL2, Schema.org, OpenGraph
+  Components: Three.js r160, Space Grotesk, Instrument Serif, JetBrains Mono
+  IDE: VS Code, Cursor
+  Hosting: Vercel
+  Doctype: HTML5
+  Language: English (en) — content also in Français, العربية
+
+                        ▲
+                       ▲ ▲
+                      ▲ ▲ ▲       built with
+                     ▲ ▲ ▲ ▲       three.js
+                    ▲ ▲ ▲ ▲ ▲       & ☕
+                   ▲ ▲ ▲ ▲ ▲ ▲

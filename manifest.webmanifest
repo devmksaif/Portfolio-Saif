@@ -1,0 +1,36 @@
+{
+  "name": "Saifeddine Makhlouf — Lead Full-Stack Developer",
+  "short_name": "Saif.Makhlouf",
+  "description": "Three.js-driven portfolio of Saifeddine Makhlouf — Lead Full-Stack Developer specializing in React Native, Spring Boot and AI/ML platforms.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#05070d",
+  "theme_color": "#05070d",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "business", "productivity", "developer"],
+  "icons": [
+    { "src": "/favicon.svg",        "type": "image/svg+xml", "sizes": "any",     "purpose": "any" },
+    { "src": "/icon-192.png",       "type": "image/png",     "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "/icon-512.png",       "type": "image/png",     "sizes": "512x512", "purpose": "any maskable" },
+    { "src": "/apple-touch-icon.png","type": "image/png",    "sizes": "180x180", "purpose": "any" }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-cover.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Hero — constellation of project nodes"
+    }
+  ],
+  "shortcuts": [
+    { "name": "View Projects",  "url": "/#projects",   "description": "Featured production builds" },
+    { "name": "Contact",        "url": "/#contact",    "description": "Hire / email / GitHub" },
+    { "name": "Experience",     "url": "/#experience", "description": "Career timeline" }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

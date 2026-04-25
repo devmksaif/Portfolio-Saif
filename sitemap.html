@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sitemap — Saifeddine Makhlouf Portfolio</title>
+<meta name="description" content="Visual sitemap of Saifeddine Makhlouf's portfolio — every page, anchor, asset, and feed indexed." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://saifeddine-portfolio.vercel.app/sitemap.html" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body { background: var(--bg); }
+  .sm-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 120px 48px 80px;
+    position: relative;
+    z-index: 2;
+  }
+  .sm-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .sm-head h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+  .sm-head h1 .italic {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--cyan);
+  }
+  .sm-head .meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    text-align: right;
+    line-height: 1.8;
+  }
+  .sm-head .meta span { color: var(--cyan); }
+
+  .sm-tree {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+  .sm-branch {
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 28px 32px;
+    background: rgba(10, 14, 26, 0.4);
+    transition: background 0.3s;
+  }
+  .sm-branch:hover { background: rgba(0, 212, 255, 0.04); }
+  .sm-branch h2 {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--cyan);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .sm-branch .num {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 56px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--ink);
+    margin: 8px 0 20px;
+  }
+  .sm-branch .num small {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    margin-left: 6px;
+  }
+  .sm-branch ul { list-style: none; }
+  .sm-branch ul li {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--ink-dim);
+    padding-left: 18px;
+    position: relative;
+  }
+  .sm-branch ul li::before {
+    content: '└';
+    position: absolute;
+    left: 0;
+    color: var(--ink-faint);
+  }
+  .sm-branch ul li:not(:last-child)::before { content: '├'; }
+  .sm-branch ul li a {
+    color: var(--ink-dim);
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .sm-branch ul li a:hover {
+    color: var(--cyan);
+    border-bottom-color: var(--cyan);
+  }
+  .sm-branch ul li .tag {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 9px;
+    padding: 1px 6px;
+    border: 1px solid var(--line);
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .sm-branch ul li .tag.live { color: var(--cyan); border-color: var(--cyan); }
+  .sm-branch ul li .tag.new { color: var(--magenta); border-color: var(--magenta); }
+
+  /* === ASCII map === */
+  .sm-ascii {
+    margin: 64px 0;
+    padding: 32px;
+    border: 1px solid var(--line);
+    background: rgba(10, 14, 26, 0.6);
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink-dim);
+    white-space: pre;
+    overflow-x: auto;
+  }
+  .sm-ascii .root { color: var(--cyan); }
+  .sm-ascii .file { color: var(--ink); }
+  .sm-ascii .dir { color: var(--violet); }
+  .sm-ascii .ext { color: var(--ink-faint); }
+
+  /* === Stats grid === */
+  .sm-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: 64px;
+  }
+  .sm-stat {
+    background: var(--bg);
+    padding: 24px;
+  }
+  .sm-stat .lbl {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 12px;
+  }
+  .sm-stat .val {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 44px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--cyan);
+  }
+  .sm-stat .val .small { font-size: 16px; color: var(--ink-dim); }
+
+  /* === XML view === */
+  .sm-xml {
+    margin-top: 48px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    background: rgba(10, 14, 26, 0.6);
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--ink-dim);
+    overflow-x: auto;
+  }
+  .sm-xml .tag { color: var(--cyan); }
+  .sm-xml .attr { color: var(--violet); }
+  .sm-xml .val { color: var(--ink); }
+  .sm-xml .comment { color: var(--ink-faint); font-style: italic; }
+  .sm-xml h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--cyan);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .sm-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 48px;
+    padding: 14px 24px;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .sm-back:hover {
+    background: var(--cyan);
+    color: var(--bg);
+  }
+
+  @media (max-width: 900px) {
+    .sm-wrap { padding: 80px 20px; }
+    .sm-tree { grid-template-columns: 1fr; }
+    .sm-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+
+<nav class="nav" role="navigation" aria-label="Primary">
+  <div class="brand">
+    <span class="dot"></span>
+    <span>SAIF.MAKHLOUF / SITEMAP</span>
+  </div>
+  <ul>
+    <li><a href="Portfolio.html">← Portfolio</a></li>
+    <li><a href="sitemap.xml">sitemap.xml</a></li>
+    <li><a href="robots.txt">robots.txt</a></li>
+    <li><a href="feed.xml">feed.xml</a></li>
+  </ul>
+  <div class="status"><span class="dot" style="width:6px;height:6px;background:#00d4ff;border-radius:50%;box-shadow:0 0 8px #00d4ff"></span> Indexed</div>
+</nav>
+
+<main class="sm-wrap">
+
+  <header class="sm-head">
+    <h1>Site<span class="italic">map</span>.<br/>Every node, indexed.</h1>
+    <div class="meta">
+      ▸ TOTAL URLs: <span>14</span><br/>
+      ▸ LAST GENERATED: <span>2026-04-25</span><br/>
+      ▸ ENCODING: <span>UTF-8</span><br/>
+      ▸ PROTOCOL: <span>sitemaps.org/0.9</span>
+    </div>
+  </header>
+
+  <!-- === Stats === -->
+  <div class="sm-stats">
+    <div class="sm-stat">
+      <div class="lbl">▸ Pages</div>
+      <div class="val">2</div>
+    </div>
+    <div class="sm-stat">
+      <div class="lbl">▸ Section anchors</div>
+      <div class="val">11</div>
+    </div>
+    <div class="sm-stat">
+      <div class="lbl">▸ Schema entities</div>
+      <div class="val">7</div>
+    </div>
+    <div class="sm-stat">
+      <div class="lbl">▸ Languages</div>
+      <div class="val">3<span class="small">+ x-default</span></div>
+    </div>
+  </div>
+
+  <!-- === Tree branches === -->
+  <div class="sm-tree">
+
+    <div class="sm-branch">
+      <h2>▸ 01 / Pages</h2>
+      <div class="num">2 <small>indexed</small></div>
+      <ul>
+        <li><a href="Portfolio.html">/ — Home (Three.js portfolio)</a> <span class="tag live">P 1.0</span></li>
+        <li><a href="sitemap.html">/sitemap — This page</a> <span class="tag">P 0.5</span></li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 02 / Section anchors</h2>
+      <div class="num">07 <small>landmarks</small></div>
+      <ul>
+        <li><a href="Portfolio.html#hero">/#hero — Hero / intro</a></li>
+        <li><a href="Portfolio.html#about">/#about — Professional summary</a></li>
+        <li><a href="Portfolio.html#skills">/#skills — Tech stack sphere</a></li>
+        <li><a href="Portfolio.html#experience">/#experience — Career timeline</a></li>
+        <li><a href="Portfolio.html#projects">/#projects — Solar system</a></li>
+        <li><a href="Portfolio.html#education">/#education — Edu &amp; certs</a></li>
+        <li><a href="Portfolio.html#contact">/#contact — Hire / contact</a></li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 03 / Project anchors</h2>
+      <div class="num">05 <small>orbits</small></div>
+      <ul>
+        <li><a href="Portfolio.html#calliverse">/#calliverse — Social mobile</a> <span class="tag live">live</span></li>
+        <li><a href="Portfolio.html#blink-delivery">/#blink-delivery — Grocery</a> <span class="tag live">live</span></li>
+        <li><a href="Portfolio.html#craftgent">/#craftgent — AI SaaS</a> <span class="tag live">live</span></li>
+        <li><a href="Portfolio.html#juliabot">/#juliabot — Enterprise AI</a> <span class="tag live">live</span></li>
+        <li><a href="Portfolio.html#acte">/#acte — FinTech</a> <span class="tag new">WIP</span></li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 04 / Crawler files</h2>
+      <div class="num">05 <small>endpoints</small></div>
+      <ul>
+        <li><a href="sitemap.xml">/sitemap.xml — XML index</a></li>
+        <li><a href="robots.txt">/robots.txt — Crawl rules</a></li>
+        <li><a href="manifest.webmanifest">/manifest.webmanifest — PWA</a></li>
+        <li><a href="feed.xml">/feed.xml — RSS updates</a></li>
+        <li><a href=".well-known/security.txt">/.well-known/security.txt</a></li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 05 / Structured data</h2>
+      <div class="num">07 <small>JSON-LD</small></div>
+      <ul>
+        <li>Person — primary entity</li>
+        <li>WebSite + SearchAction</li>
+        <li>WebPage</li>
+        <li>BreadcrumbList</li>
+        <li>ProfessionalService</li>
+        <li>ItemList — projects</li>
+        <li>FAQPage</li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 06 / Locales</h2>
+      <div class="num">03 <small>+ x-default</small></div>
+      <ul>
+        <li><a href="Portfolio.html">/ — English (en)</a></li>
+        <li>/fr/ — Français (fr) <span class="tag">planned</span></li>
+        <li>/ar/ — العربية (ar) <span class="tag">planned</span></li>
+        <li>x-default → /</li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 07 / Assets</h2>
+      <div class="num">06 <small>files</small></div>
+      <ul>
+        <li>styles.css — typography &amp; layout</li>
+        <li>three-scene.js — hero constellation</li>
+        <li>skills-sphere.js — 3D tech sphere</li>
+        <li>solar-system.js — projects orbit</li>
+        <li>favicon.svg — brand mark</li>
+        <li>og-cover.png — social preview</li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 08 / Outbound</h2>
+      <div class="num">04 <small>profiles</small></div>
+      <ul>
+        <li><a href="https://github.com/devmksaif" rel="me noopener">github.com/devmksaif ↗</a></li>
+        <li><a href="mailto:saifeddine.ben.makhlouf@gmail.com">mailto: email ↗</a></li>
+        <li><a href="tel:+21620099922">tel: +216 20 099 922 ↗</a></li>
+        <li><a href="https://saifeddine-portfolio.vercel.app/" rel="canonical">canonical → vercel.app ↗</a></li>
+      </ul>
+    </div>
+
+    <div class="sm-branch">
+      <h2>▸ 09 / Author</h2>
+      <div class="num">SM</div>
+      <ul>
+        <li>Saifeddine Makhlouf</li>
+        <li>Lead Full-Stack Developer</li>
+        <li>Tunis, Tunisia · UTC+1</li>
+        <li>Languages: AR · FR · EN</li>
+        <li><a href="humans.txt">/humans.txt</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- === ASCII tree === -->
+  <pre class="sm-ascii"><span class="root">saifeddine-portfolio.vercel.app/</span>
+├── <span class="file">Portfolio.html</span>             <span class="ext"># priority 1.0 · weekly</span>
+│   ├── #hero
+│   ├── #about
+│   ├── #skills
+│   ├── #experience
+│   │   ├── YOTSYSTEM (current)
+│   │   ├── IEEE ISET Djerba
+│   │   ├── Freelance · Upwork/Fiverr
+│   │   ├── IEEE IAS Chapter
+│   │   ├── TOPNET (intern)
+│   │   └── Info Pro Digital (intern)
+│   ├── #projects
+│   │   ├── #calliverse        <span class="ext">→ Play Store · React Native</span>
+│   │   ├── #blink-delivery    <span class="ext">→ Play Store · React Native</span>
+│   │   ├── #craftgent         <span class="ext">→ AI SaaS · OpenAI</span>
+│   │   ├── #juliabot          <span class="ext">→ Enterprise · Next.js + NestJS</span>
+│   │   └── #acte              <span class="ext">→ FinTech · WIP</span>
+│   ├── #education
+│   └── #contact
+│
+├── <span class="file">sitemap.html</span>               <span class="ext"># this page</span>
+├── <span class="file">sitemap.xml</span>                <span class="ext"># 14 URLs · sitemaps.org/0.9</span>
+├── <span class="file">robots.txt</span>                 <span class="ext"># crawl rules + bot policy</span>
+├── <span class="file">manifest.webmanifest</span>       <span class="ext"># PWA · standalone · #05070d</span>
+├── <span class="file">feed.xml</span>                   <span class="ext"># RSS 2.0 · 4 items</span>
+├── <span class="file">humans.txt</span>                 <span class="ext"># the team behind the site</span>
+├── <span class="file">favicon.svg</span>                <span class="ext"># vector · scalable any size</span>
+├── <span class="file">browserconfig.xml</span>          <span class="ext"># MS Tile metadata</span>
+├── <span class="file">og-cover.png</span>               <span class="ext"># 1200×630 · social preview</span>
+│
+├── <span class="dir">.well-known/</span>
+│   └── <span class="file">security.txt</span>           <span class="ext"># RFC 9116 disclosure policy</span>
+│
+└── <span class="dir">assets/</span>
+    ├── <span class="file">styles.css</span>             <span class="ext"># tokens + layout</span>
+    ├── <span class="file">three-scene.js</span>         <span class="ext"># hero constellation</span>
+    ├── <span class="file">skills-sphere.js</span>       <span class="ext"># 3D tag sphere</span>
+    └── <span class="file">solar-system.js</span>        <span class="ext"># planet orbits</span></pre>
+
+  <!-- === XML preview === -->
+  <div class="sm-xml">
+    <h3>▸ /sitemap.xml — first entries (raw)</h3>
+<pre style="margin:0;font-family:inherit;color:inherit;background:none">
+<span class="comment">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;urlset</span> <span class="attr">xmlns</span>=<span class="val">"http://www.sitemaps.org/schemas/sitemap/0.9"</span>
+        <span class="attr">xmlns:xhtml</span>=<span class="val">"http://www.w3.org/1999/xhtml"</span>
+        <span class="attr">xmlns:image</span>=<span class="val">"http://www.google.com/schemas/sitemap-image/1.1"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;url&gt;</span>
+    <span class="tag">&lt;loc&gt;</span><span class="val">https://saifeddine-portfolio.vercel.app/</span><span class="tag">&lt;/loc&gt;</span>
+    <span class="tag">&lt;lastmod&gt;</span><span class="val">2026-04-25</span><span class="tag">&lt;/lastmod&gt;</span>
+    <span class="tag">&lt;changefreq&gt;</span><span class="val">weekly</span><span class="tag">&lt;/changefreq&gt;</span>
+    <span class="tag">&lt;priority&gt;</span><span class="val">1.0</span><span class="tag">&lt;/priority&gt;</span>
+    <span class="tag">&lt;xhtml:link</span> <span class="attr">rel</span>=<span class="val">"alternate"</span> <span class="attr">hreflang</span>=<span class="val">"en"</span> <span class="attr">href</span>=<span class="val">"…/"</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;xhtml:link</span> <span class="attr">rel</span>=<span class="val">"alternate"</span> <span class="attr">hreflang</span>=<span class="val">"fr"</span> <span class="attr">href</span>=<span class="val">"…/fr/"</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;xhtml:link</span> <span class="attr">rel</span>=<span class="val">"alternate"</span> <span class="attr">hreflang</span>=<span class="val">"ar"</span> <span class="attr">href</span>=<span class="val">"…/ar/"</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;image:image&gt;</span>
+      <span class="tag">&lt;image:loc&gt;</span><span class="val">…/og-cover.png</span><span class="tag">&lt;/image:loc&gt;</span>
+      <span class="tag">&lt;image:title&gt;</span><span class="val">Saifeddine Makhlouf — Lead Full-Stack Developer</span><span class="tag">&lt;/image:title&gt;</span>
+    <span class="tag">&lt;/image:image&gt;</span>
+  <span class="tag">&lt;/url&gt;</span>
+
+  <span class="comment">&lt;!-- + 13 more URLs (section + project anchors, aux pages) --&gt;</span>
+
+<span class="tag">&lt;/urlset&gt;</span></pre>
+  </div>
+
+  <a class="sm-back" href="Portfolio.html">
+    <span>←</span>
+    <span>Back to portfolio</span>
+  </a>
+
+</main>
+
+</body>
+</html>

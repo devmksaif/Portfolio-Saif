@@ -1,19 +1,399 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Saifeddine Makhlouf — Lead Full-Stack Developer</title>
-<link rel="stylesheet" href="styles.css" />
-</head>
-<body>
 
-<canvas id="three-canvas"></canvas>
-<div class="bg-grid"></div>
-<div class="scroll-progress" id="scroll-bar"></div>
+<!-- ===== Core ===== -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#05070d" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#05070d" />
+
+<!-- ===== Primary SEO ===== -->
+<title>Saifeddine Makhlouf — Lead Full-Stack Developer · React Native, Spring Boot &amp; AI</title>
+<meta name="description" content="Saifeddine Makhlouf — Lead Full-Stack Developer with 6+ years building React Native mobile apps, Spring Boot microservices and AI/ML platforms. Currently leading engineering at YOTSYSTEM (maritime tech). Open to senior &amp; lead roles in the GCC region." />
+<meta name="keywords" content="Saifeddine Makhlouf, Saif Makhlouf, devmksaif, Lead Full-Stack Developer Tunisia, React Native developer GCC, Spring Boot engineer, Next.js, NestJS, TypeScript, microservices architect, AI engineer, LangChain, RAG, OpenAI integration, WebRTC, WebSockets, mobile app developer, hire full-stack developer Tunis, freelance React Native developer, YOTSYSTEM, Calliverse, JuliaBot, CraftGent, Blink Delivery, IEEE AI Challenge winner" />
+<meta name="author" content="Saifeddine Makhlouf" />
+<meta name="creator" content="Saifeddine Makhlouf" />
+<meta name="publisher" content="Saifeddine Makhlouf" />
+<meta name="copyright" content="© 2026 Saifeddine Makhlouf. All rights reserved." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="bingbot" content="index, follow" />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+<meta name="revisit-after" content="7 days" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="format-detection" content="telephone=yes, email=yes, address=yes" />
+<meta name="google" content="notranslate" />
+<meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_VERIFICATION_TOKEN" />
+<meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION_TOKEN" />
+<meta name="yandex-verification" content="REPLACE_WITH_YANDEX_VERIFICATION_TOKEN" />
+
+<!-- ===== Geo / Locale ===== -->
+<meta name="geo.region" content="TN-11" />
+<meta name="geo.placename" content="Tunis, Tunisia" />
+<meta name="geo.position" content="36.8065;10.1815" />
+<meta name="ICBM" content="36.8065, 10.1815" />
+<meta name="language" content="English" />
+
+<!-- ===== Canonical &amp; alternates ===== -->
+<link rel="canonical" href="https://saifeddine-portfolio.vercel.app/" />
+<link rel="alternate" hreflang="en" href="https://saifeddine-portfolio.vercel.app/" />
+<link rel="alternate" hreflang="fr" href="https://saifeddine-portfolio.vercel.app/fr/" />
+<link rel="alternate" hreflang="ar" href="https://saifeddine-portfolio.vercel.app/ar/" />
+<link rel="alternate" hreflang="x-default" href="https://saifeddine-portfolio.vercel.app/" />
+
+<!-- ===== Open Graph (Facebook, LinkedIn, WhatsApp, Slack…) ===== -->
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Saifeddine Makhlouf — Portfolio" />
+<meta property="og:title" content="Saifeddine Makhlouf — Lead Full-Stack Developer" />
+<meta property="og:description" content="6+ years architecting React Native mobile, Spring Boot microservices &amp; AI/ML platforms. Leading engineering at YOTSYSTEM. Open to senior &amp; lead roles in the GCC." />
+<meta property="og:url" content="https://saifeddine-portfolio.vercel.app/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="ar_TN" />
+<meta property="og:image" content="https://saifeddine-portfolio.vercel.app/og-cover.png" />
+<meta property="og:image:secure_url" content="https://saifeddine-portfolio.vercel.app/og-cover.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Saifeddine Makhlouf — Lead Full-Stack Developer. A constellation of project nodes on a deep space backdrop." />
+<meta property="profile:first_name" content="Saifeddine" />
+<meta property="profile:last_name" content="Makhlouf" />
+<meta property="profile:username" content="devmksaif" />
+<meta property="profile:gender" content="male" />
+
+<!-- ===== Twitter / X ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@devmksaif" />
+<meta name="twitter:creator" content="@devmksaif" />
+<meta name="twitter:title" content="Saifeddine Makhlouf — Lead Full-Stack Developer" />
+<meta name="twitter:description" content="React Native · Spring Boot · AI. Leading engineering at YOTSYSTEM. Open to senior &amp; lead roles in the GCC." />
+<meta name="twitter:image" content="https://saifeddine-portfolio.vercel.app/og-cover.png" />
+<meta name="twitter:image:alt" content="Saifeddine Makhlouf — Three.js portfolio cover" />
+
+<!-- ===== Apple / PWA ===== -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Saif.Makhlouf" />
+<meta name="application-name" content="Saif.Makhlouf — Portfolio" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="msapplication-TileColor" content="#05070d" />
+<meta name="msapplication-TileImage" content="/icon-144.png" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+
+<!-- ===== Icons &amp; Manifest ===== -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00d4ff" />
+<link rel="manifest" href="manifest.webmanifest" />
+
+<!-- ===== Sitemaps &amp; feeds ===== -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+<link rel="alternate" type="application/rss+xml" title="Saifeddine Makhlouf — Updates" href="feed.xml" />
+<link rel="author" href="humans.txt" />
+<link rel="me" href="https://github.com/devmksaif" />
+<link rel="me" href="mailto:saifeddine.ben.makhlouf@gmail.com" />
+
+<!-- ===== Performance hints ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://unpkg.com" crossorigin />
+<link rel="dns-prefetch" href="https://github.com" />
+<link rel="dns-prefetch" href="https://saifeddine-portfolio.vercel.app" />
+<link rel="preload" as="style" href="styles.css" />
+<link rel="preload" as="script" href="https://unpkg.com/three@0.160.0/build/three.min.js" crossorigin />
+
+<!-- ===== Stylesheet ===== -->
+<link rel="stylesheet" href="styles.css" />
+
+<!-- ===== JSON-LD: Person (primary entity) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://saifeddine-portfolio.vercel.app/#person",
+  "name": "Saifeddine Makhlouf",
+  "alternateName": ["Saif Makhlouf", "devmksaif"],
+  "givenName": "Saifeddine",
+  "familyName": "Makhlouf",
+  "jobTitle": "Lead Full-Stack Developer",
+  "description": "Lead Full-Stack Developer with 6+ years architecting React Native mobile, Spring Boot microservices and AI/ML platforms.",
+  "image": "https://saifeddine-portfolio.vercel.app/og-cover.png",
+  "url": "https://saifeddine-portfolio.vercel.app/",
+  "email": "mailto:saifeddine.ben.makhlouf@gmail.com",
+  "telephone": "+216-20-099-922",
+  "gender": "Male",
+  "nationality": { "@type": "Country", "name": "Tunisia" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tunis",
+    "addressCountry": "TN"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "YOTSYSTEM",
+    "description": "Maritime tech company delivering AI-powered yacht management and digital transformation solutions.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tunis", "addressCountry": "TN" }
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Superior Institute of Technological Studies (ISET Djerba)", "address": "Tunisia" },
+    { "@type": "EducationalOrganization", "name": "Lycée Borj Cedria", "address": "Tunisia" }
+  ],
+  "knowsAbout": [
+    "React Native", "TypeScript", "Spring Boot", "Node.js", "NestJS", "Next.js",
+    "PostgreSQL", "MongoDB", "Microservices", "GraphQL", "WebRTC", "WebSockets",
+    "Docker", "Kubernetes", "CI/CD", "Google Cloud",
+    "TensorFlow", "PyTorch", "OpenAI GPT-4", "LangChain", "RAG", "Conversational AI",
+    "Stripe", "Clerk", "OAuth2", "JWT", "Web3", "Mobile App Architecture", "Agile/Scrum"
+  ],
+  "knowsLanguage": [
+    { "@type": "Language", "name": "Arabic", "alternateName": "ar" },
+    { "@type": "Language", "name": "French", "alternateName": "fr" },
+    { "@type": "Language", "name": "English", "alternateName": "en" }
+  ],
+  "award": [
+    "National Winner — IEEE AI Challenge (Cybersecurity & Machine Learning)",
+    "Google Cloud Platform Fundamentals — Google",
+    "Google Kubernetes Certificate — Google",
+    "Innovation Camp Certification — INJAZ Tunisia"
+  ],
+  "memberOf": { "@type": "Organization", "name": "IEEE — Institute of Electrical and Electronics Engineers" },
+  "sameAs": [
+    "https://github.com/devmksaif",
+    "https://saifeddine-portfolio.vercel.app/",
+    "https://www.linkedin.com/in/saifeddine-makhlouf",
+    "https://www.upwork.com/freelancers/devmksaif",
+    "https://www.fiverr.com/devmksaif"
+  ]
+}
+</script>
+
+<!-- ===== JSON-LD: WebSite + SearchAction ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://saifeddine-portfolio.vercel.app/#website",
+  "url": "https://saifeddine-portfolio.vercel.app/",
+  "name": "Saifeddine Makhlouf — Portfolio",
+  "description": "Three.js-driven portfolio of Saifeddine Makhlouf, Lead Full-Stack Developer.",
+  "inLanguage": ["en", "fr", "ar"],
+  "publisher": { "@id": "https://saifeddine-portfolio.vercel.app/#person" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://saifeddine-portfolio.vercel.app/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ===== JSON-LD: WebPage ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://saifeddine-portfolio.vercel.app/#webpage",
+  "url": "https://saifeddine-portfolio.vercel.app/",
+  "name": "Saifeddine Makhlouf — Lead Full-Stack Developer",
+  "isPartOf": { "@id": "https://saifeddine-portfolio.vercel.app/#website" },
+  "about": { "@id": "https://saifeddine-portfolio.vercel.app/#person" },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://saifeddine-portfolio.vercel.app/og-cover.png",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "2026-01-15",
+  "dateModified": "2026-04-25",
+  "inLanguage": "en"
+}
+</script>
+
+<!-- ===== JSON-LD: BreadcrumbList ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saifeddine-portfolio.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://saifeddine-portfolio.vercel.app/#about" },
+    { "@type": "ListItem", "position": 3, "name": "Skills", "item": "https://saifeddine-portfolio.vercel.app/#skills" },
+    { "@type": "ListItem", "position": 4, "name": "Experience", "item": "https://saifeddine-portfolio.vercel.app/#experience" },
+    { "@type": "ListItem", "position": 5, "name": "Projects", "item": "https://saifeddine-portfolio.vercel.app/#projects" },
+    { "@type": "ListItem", "position": 6, "name": "Education", "item": "https://saifeddine-portfolio.vercel.app/#education" },
+    { "@type": "ListItem", "position": 7, "name": "Contact", "item": "https://saifeddine-portfolio.vercel.app/#contact" }
+  ]
+}
+</script>
+
+<!-- ===== JSON-LD: ProfessionalService (lead-gen for hiring) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Saifeddine Makhlouf — Freelance Full-Stack &amp; React Native Development",
+  "image": "https://saifeddine-portfolio.vercel.app/og-cover.png",
+  "url": "https://saifeddine-portfolio.vercel.app/#contact",
+  "telephone": "+216-20-099-922",
+  "email": "mailto:saifeddine.ben.makhlouf@gmail.com",
+  "priceRange": "$$",
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Gulf Cooperation Council (GCC)" },
+    { "@type": "Country", "name": "United Arab Emirates" },
+    { "@type": "Country", "name": "Saudi Arabia" },
+    { "@type": "Country", "name": "Qatar" },
+    { "@type": "Country", "name": "Kuwait" },
+    { "@type": "Country", "name": "Bahrain" },
+    { "@type": "Country", "name": "Oman" },
+    { "@type": "Country", "name": "Tunisia" },
+    { "@type": "Place", "name": "Remote — Worldwide" }
+  ],
+  "serviceType": [
+    "React Native mobile app development",
+    "Spring Boot microservices architecture",
+    "Next.js / NestJS full-stack development",
+    "AI / LLM integration (OpenAI, LangChain, RAG)",
+    "DevOps — Docker, Kubernetes, CI/CD",
+    "Engineering team leadership"
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Tunis", "addressCountry": "TN" },
+  "provider": { "@id": "https://saifeddine-portfolio.vercel.app/#person" }
+}
+</script>
+
+<!-- ===== JSON-LD: ItemList — Featured Projects ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Featured Projects",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Calliverse",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "Full social networking app — real-time messaging, video calls, premium subscriptions.",
+        "author": { "@id": "https://saifeddine-portfolio.vercel.app/#person" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Blink Delivery",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "Cross-platform grocery app — live order tracking, multi-address delivery, coupon system.",
+        "author": { "@id": "https://saifeddine-portfolio.vercel.app/#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "CraftGent",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Multi-channel AI agent platform with real-time analytics, Stripe billing, and 100+ customization options.",
+        "author": { "@id": "https://saifeddine-portfolio.vercel.app/#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "JuliaBot",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Enterprise AI platform with 7 specialized agents, Web3/blockchain architecture, JWT RBAC, 11-language i18n.",
+        "author": { "@id": "https://saifeddine-portfolio.vercel.app/#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Africa Creative Talent Expo",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "FinTech platform with cashback rewards, proprietary voting currency, and real-time transactions.",
+        "author": { "@id": "https://saifeddine-portfolio.vercel.app/#person" }
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ===== JSON-LD: FAQPage (rich result candidate) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is Saifeddine Makhlouf?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Saifeddine Makhlouf is a Lead Full-Stack Developer based in Tunis, Tunisia, with 6+ years of experience building React Native mobile apps, Spring Boot microservices, and AI/ML platforms. He currently leads engineering at YOTSYSTEM, a maritime tech company." }
+    },
+    {
+      "@type": "Question",
+      "name": "What technologies does Saifeddine specialize in?",
+      "acceptedAnswer": { "@type": "Answer", "text": "React Native, TypeScript, Spring Boot, Next.js, NestJS, PostgreSQL, MongoDB, Docker, Kubernetes, OpenAI/LangChain, WebRTC and WebSockets — across the full MERN/PERN and JVM stacks." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Saifeddine available for hire?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — open to senior and lead engineering roles across the GCC region (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman) and remote worldwide. Reach out at saifeddine.ben.makhlouf@gmail.com or +216 20 099 922." }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages does Saifeddine speak?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Arabic (native), French (C2 — native-level), and English (C1, TOEIC in prep)." }
+    },
+    {
+      "@type": "Question",
+      "name": "What awards has Saifeddine received?",
+      "acceptedAnswer": { "@type": "Answer", "text": "National Winner of the IEEE AI Challenge (Cybersecurity & Machine Learning), plus Google Cloud Platform Fundamentals, Google Kubernetes, and INJAZ Tunisia Innovation Camp certifications." }
+    }
+  ]
+}
+</script>
+
+</head>
+<body itemscope itemtype="https://schema.org/Person">
+
+<!-- a11y skip-link (also helps SEO crawlers reach main content) -->
+<a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to main content</a>
+
+<!-- Hidden microdata stamps for crawlers (visual: hidden) -->
+<meta itemprop="name" content="Saifeddine Makhlouf" />
+<meta itemprop="jobTitle" content="Lead Full-Stack Developer" />
+<meta itemprop="url" content="https://saifeddine-portfolio.vercel.app/" />
+<meta itemprop="email" content="saifeddine.ben.makhlouf@gmail.com" />
+<meta itemprop="telephone" content="+216-20-099-922" />
+
+<canvas id="three-canvas" role="img" aria-label="Interactive Three.js constellation of project nodes drifting through deep space — decorative background."></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="scroll-progress" id="scroll-bar" aria-hidden="true"></div>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" role="navigation" aria-label="Primary">
   <div class="brand">
     <span class="dot"></span>
     <span>SAIF.MAKHLOUF</span>
@@ -29,10 +409,10 @@
   <div class="status"><span class="dot" style="width:6px;height:6px;background:#00d4ff;border-radius:50%;box-shadow:0 0 8px #00d4ff"></span> Open to GCC roles</div>
 </nav>
 
-<div class="page">
+<main id="main" class="page" role="main">
 
 <!-- HERO -->
-<section class="hero" data-screen-label="01 Hero">
+<header class="hero" data-screen-label="01 Hero" itemscope itemtype="https://schema.org/WPHeader">
   <div class="meta-top">
     <span>PORTFOLIO / 2026</span>
     <span>TUNIS — TUNISIA · 36.8°N 10.1°E</span>
@@ -60,7 +440,7 @@
     <span class="line"></span>
     <span>00 → 06</span>
   </div>
-</section>
+</header>
 
 <!-- ABOUT -->
 <section id="about" class="section" data-screen-label="02 About">
@@ -446,7 +826,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact" data-screen-label="07 Contact">
+<section id="contact" class="contact" data-screen-label="07 Contact" itemscope itemtype="https://schema.org/ContactPage">
   <div class="section-tag">06 — End Transmission</div>
 
   <h2>Let's build<br/>something <span class="italic">that lasts</span>.</h2>
@@ -494,7 +874,24 @@
   </div>
 </section>
 
-</div>
+</main>
+
+<!-- ===== SEO content (visually hidden, crawler-readable) ===== -->
+<aside class="sr-only" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden">
+  <h2>Saifeddine Makhlouf — Lead Full-Stack Developer · Tunis, Tunisia</h2>
+  <p>Saifeddine Makhlouf (also known as Saif Makhlouf or devmksaif) is a Lead Full-Stack Developer based in Tunis, Tunisia, with 6+ years of experience architecting React Native mobile applications, Spring Boot microservices, Next.js / NestJS web platforms, and AI/ML systems. He is currently leading engineering at YOTSYSTEM, a maritime tech company delivering AI-powered yacht management.</p>
+  <p>Open to senior and lead engineering opportunities across the GCC region — United Arab Emirates (UAE), Dubai, Abu Dhabi, Saudi Arabia, Riyadh, Jeddah, Qatar, Doha, Kuwait, Bahrain, Manama, Oman, Muscat — and remote worldwide.</p>
+  <h3>Featured projects</h3>
+  <ul>
+    <li>Calliverse — React Native social networking app with WebRTC video calls and Stripe subscriptions, available on Google Play.</li>
+    <li>Blink Delivery — cross-platform grocery app with live order tracking, available on Google Play.</li>
+    <li>CraftGent — multi-channel AI agent SaaS platform with OpenAI and Gemini integrations.</li>
+    <li>JuliaBot — enterprise AI platform with 7 specialized agents, Web3 architecture and 11-language support.</li>
+    <li>Africa Creative Talent Expo — fintech app with cashback rewards and proprietary voting currency.</li>
+  </ul>
+  <h3>Contact</h3>
+  <p>Email: saifeddine.ben.makhlouf@gmail.com — Phone: +216 20 099 922 — GitHub: github.com/devmksaif — Portfolio: saifeddine-portfolio.vercel.app</p>
+</aside>
 
 <!-- Three.js + scene scripts -->
 <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
