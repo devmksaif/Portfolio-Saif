@@ -1,6 +1,6 @@
 # ============================================================
 #  robots.txt — Saifeddine Makhlouf Portfolio
-#  https://saifeddine-portfolio.vercel.app/
+#  https://saifeddine.tech/
 # ============================================================
 
 User-agent: *
@@ -73,5 +73,5 @@ User-agent: DotBot
 Disallow: /
 
 # === Sitemaps ===
-Sitemap: https://saifeddine-portfolio.vercel.app/sitemap.xml
-Sitemap: https://saifeddine-portfolio.vercel.app/sitemap.html
+Sitemap: https://saifeddine.tech/sitemap.xml
+Sitemap: https://saifeddine.tech/sitemap.html

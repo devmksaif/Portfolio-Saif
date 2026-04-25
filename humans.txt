@@ -1,6 +1,6 @@
 /* TEAM */
   Lead Full-Stack Developer: Saifeddine Makhlouf
-  Site: https://saifeddine-portfolio.vercel.app/
+  Site: https://saifeddine.tech/
   GitHub: @devmksaif
   Email: saifeddine.ben.makhlouf [at] gmail.com
   Location: Tunis, Tunisia (UTC+1)

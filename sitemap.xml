@@ -8,16 +8,16 @@
 
   <!-- ===== HOME ===== -->
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/</loc>
+    <loc>https://saifeddine.tech/</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://saifeddine-portfolio.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://saifeddine-portfolio.vercel.app/fr/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://saifeddine-portfolio.vercel.app/ar/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://saifeddine-portfolio.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saifeddine.tech/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://saifeddine.tech/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saifeddine.tech/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saifeddine.tech/" />
     <image:image>
-      <image:loc>https://saifeddine-portfolio.vercel.app/og-cover.png</image:loc>
+      <image:loc>https://saifeddine.tech/og-cover.png</image:loc>
       <image:title>Saifeddine Makhlouf — Lead Full-Stack Developer</image:title>
       <image:caption>Three.js portfolio cover — constellation of project nodes on deep space backdrop.</image:caption>
     </image:image>
@@ -25,37 +25,37 @@
 
   <!-- ===== SECTION DEEP-LINKS (anchors) ===== -->
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#about</loc>
+    <loc>https://saifeddine.tech/#about</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#skills</loc>
+    <loc>https://saifeddine.tech/#skills</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#experience</loc>
+    <loc>https://saifeddine.tech/#experience</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#projects</loc>
+    <loc>https://saifeddine.tech/#projects</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#education</loc>
+    <loc>https://saifeddine.tech/#education</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#contact</loc>
+    <loc>https://saifeddine.tech/#contact</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -63,31 +63,31 @@
 
   <!-- ===== PROJECT DETAIL ANCHORS ===== -->
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#calliverse</loc>
+    <loc>https://saifeddine.tech/#calliverse</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#blink-delivery</loc>
+    <loc>https://saifeddine.tech/#blink-delivery</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#craftgent</loc>
+    <loc>https://saifeddine.tech/#craftgent</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#juliabot</loc>
+    <loc>https://saifeddine.tech/#juliabot</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/#acte</loc>
+    <loc>https://saifeddine.tech/#acte</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -95,13 +95,13 @@
 
   <!-- ===== AUXILIARY PAGES ===== -->
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/sitemap.html</loc>
+    <loc>https://saifeddine.tech/sitemap.html</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://saifeddine-portfolio.vercel.app/humans.txt</loc>
+    <loc>https://saifeddine.tech/humans.txt</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

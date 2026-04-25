@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Saifeddine Makhlouf — Portfolio Updates</title>
-    <link>https://saifeddine-portfolio.vercel.app/</link>
-    <atom:link href="https://saifeddine-portfolio.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://saifeddine.tech/</link>
+    <atom:link href="https://saifeddine.tech/feed.xml" rel="self" type="application/rss+xml" />
     <description>Project launches, role changes and engineering notes from Saifeddine Makhlouf — Lead Full-Stack Developer.</description>
     <language>en-us</language>
     <copyright>© 2026 Saifeddine Makhlouf</copyright>
@@ -18,7 +18,7 @@
 
     <item>
       <title>Promoted to Lead Full-Stack Developer at YOTSYSTEM</title>
-      <link>https://saifeddine-portfolio.vercel.app/#experience</link>
+      <link>https://saifeddine.tech/#experience</link>
       <guid isPermaLink="false">yotsystem-lead-2026-01</guid>
       <pubDate>Thu, 15 Jan 2026 09:00:00 +0100</pubDate>
       <dc:creator>Saifeddine Makhlouf</dc:creator>
@@ -27,7 +27,7 @@
 
     <item>
       <title>JuliaBot v2 — 7 specialized agents and 11-language i18n shipped</title>
-      <link>https://saifeddine-portfolio.vercel.app/#juliabot</link>
+      <link>https://saifeddine.tech/#juliabot</link>
       <guid isPermaLink="false">juliabot-v2-2026</guid>
       <pubDate>Mon, 02 Mar 2026 12:00:00 +0100</pubDate>
       <dc:creator>Saifeddine Makhlouf</dc:creator>
@@ -36,7 +36,7 @@
 
     <item>
       <title>Calliverse hits public beta on Google Play</title>
-      <link>https://saifeddine-portfolio.vercel.app/#calliverse</link>
+      <link>https://saifeddine.tech/#calliverse</link>
       <guid isPermaLink="false">calliverse-playstore-2025</guid>
       <pubDate>Tue, 12 Nov 2025 16:00:00 +0100</pubDate>
       <dc:creator>Saifeddine Makhlouf</dc:creator>
@@ -45,7 +45,7 @@
 
     <item>
       <title>National Winner — IEEE AI Challenge (Cybersecurity & ML)</title>
-      <link>https://saifeddine-portfolio.vercel.app/#education</link>
+      <link>https://saifeddine.tech/#education</link>
       <guid isPermaLink="false">ieee-ai-challenge-winner</guid>
       <pubDate>Fri, 20 Sep 2024 18:00:00 +0100</pubDate>
       <dc:creator>Saifeddine Makhlouf</dc:creator>
