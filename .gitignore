@@ -1,0 +1,6 @@
+.vercel
+uploads/
+*.docx
+*.pdf
+.DS_Store
+Thumbs.db
