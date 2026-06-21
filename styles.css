@@ -1,6 +1,5 @@
 /* === SAIFEDDINE MAKHLOUF — PORTFOLIO === */
-
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=JetBrains+Mono:wght@300;400;500;700&family=Instrument+Serif:ital@0;1&display=swap');
+/* Fonts are loaded asynchronously via <link> in each page's <head> (non-render-blocking). */
 
 :root {
   --bg: #05070d;
@@ -242,10 +241,11 @@ a { color: inherit; text-decoration: none; }
   width: 30%; height: 100%;
   background: var(--cyan);
   animation: scroll-arrow 2s infinite;
+  will-change: transform;
 }
 @keyframes scroll-arrow {
-  0% { left: -30%; }
-  100% { left: 100%; }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(333%); }
 }
 
 /* === ABOUT === */

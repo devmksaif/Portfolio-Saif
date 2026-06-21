@@ -4,6 +4,13 @@
   const host = document.getElementById('solar-3d');
   if (!host) return;
 
+  // Lazy-init: only build this WebGL scene when it scrolls near the viewport,
+  // keeping it off the critical path at page load.
+  let started = false;
+  function init() {
+    if (started) return;
+    started = true;
+
   const w = host.clientWidth, h = host.clientHeight;
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -147,4 +154,14 @@
     requestAnimationFrame(tick);
   }
   tick();
+  }
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function (entries) {
+      if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); init(); }
+    }, { rootMargin: '300px' });
+    io.observe(host);
+  } else {
+    init();
+  }
 })();

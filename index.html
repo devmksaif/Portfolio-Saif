@@ -100,11 +100,13 @@
 <!-- ===== Performance hints ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://unpkg.com" crossorigin />
 <link rel="dns-prefetch" href="https://github.com" />
-<link rel="dns-prefetch" href="https://saifeddine.tech" />
 <link rel="preload" as="style" href="styles.css" />
-<link rel="preload" as="script" href="https://unpkg.com/three@0.160.0/build/three.min.js" crossorigin />
+
+<!-- ===== Fonts (async, non-render-blocking) ===== -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=JetBrains+Mono:wght@300;400;500;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=JetBrains+Mono:wght@300;400;500;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=JetBrains+Mono:wght@300;400;500;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" /></noscript>
 
 <!-- ===== Stylesheet ===== -->
 <link rel="stylesheet" href="styles.css" />
@@ -872,10 +874,10 @@
 </aside>
 
 <!-- Three.js + scene scripts -->
-<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
-<script src="three-scene.js"></script>
-<script src="skills-sphere.js"></script>
-<script src="solar-system.js"></script>
+<script defer src="/vendor/three.min.js"></script>
+<script defer src="/three-scene.js"></script>
+<script defer src="/skills-sphere.js"></script>
+<script defer src="/solar-system.js"></script>
 
 </body>
 </html>
