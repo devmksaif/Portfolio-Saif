@@ -4,6 +4,9 @@
   const host = document.getElementById('skills-3d');
   if (!host) return;
 
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
   // Lazy-init: only build this WebGL scene when it scrolls near the viewport,
   // keeping it off the critical path at page load.
   let started = false;
@@ -15,7 +18,7 @@
   const h = host.clientHeight;
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
   renderer.setSize(w, h);
   host.appendChild(renderer.domElement);
 
@@ -131,7 +134,7 @@
 
     // billboard sprites toward camera (sprites are auto-billboarded)
     renderer.render(scene, camera);
-    requestAnimationFrame(tick);
+    if (!reduceMotion) requestAnimationFrame(tick);
   }
   tick();
   }

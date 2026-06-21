@@ -9,8 +9,14 @@
   const canvas = document.getElementById('three-canvas');
   if (!canvas) return;
 
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+  const pd = isMobile ? 0.4 : 1; // particle-density scale on small screens
+
+  function init() {
+
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor(0x000000, 0);
 
@@ -37,13 +43,13 @@
     });
     return new THREE.Points(geom, mat);
   }
-  scene.add(makeStars(2200, 360, 0.08, 0xffffff));
-  scene.add(makeStars(1400, 280, 0.16, 0x00d4ff));
-  scene.add(makeStars(700, 220, 0.22, 0x7c3aed));
+  scene.add(makeStars(Math.round(2200 * pd), 360, 0.08, 0xffffff));
+  scene.add(makeStars(Math.round(1400 * pd), 280, 0.16, 0x00d4ff));
+  scene.add(makeStars(Math.round(700 * pd), 220, 0.22, 0x7c3aed));
 
   // ---- Nebula dust (large soft particles) ----
   const nebGeom = new THREE.BufferGeometry();
-  const nebCount = 220;
+  const nebCount = Math.round(220 * pd);
   const nebPos = new Float32Array(nebCount * 3);
   for (let i = 0; i < nebCount; i++) {
     nebPos[i * 3 + 0] = (Math.random() - 0.5) * 180;
@@ -196,7 +202,13 @@
     lineMat.opacity = 0.15 + Math.sin(t * 0.6) * 0.08;
 
     renderer.render(scene, camera);
-    requestAnimationFrame(tick);
+    if (!reduceMotion) requestAnimationFrame(tick);
   }
   tick();
+  }
+
+  // Defer heavy WebGL init until the main thread is idle so the hero text
+  // paints first (better FCP/LCP). Reduced-motion users get one static frame.
+  if ('requestIdleCallback' in window) { requestIdleCallback(init, { timeout: 1500 }); }
+  else { setTimeout(init, 200); }
 })();
