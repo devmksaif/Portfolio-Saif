@@ -204,7 +204,23 @@
     renderer.render(scene, camera);
     if (!reduceMotion) requestAnimationFrame(tick);
   }
-  tick();
+
+  // Paint one static frame now; start the continuous animation only once the
+  // user engages (or after a short fallback). Keeps the load-time main thread
+  // free — the decorative background doesn't animate before anyone interacts.
+  renderer.render(scene, camera);
+  if (!reduceMotion) {
+    let animating = false;
+    const wakeEvents = ['scroll', 'pointermove', 'pointerdown', 'keydown', 'touchstart', 'wheel'];
+    const startAnim = function () {
+      if (animating) return;
+      animating = true;
+      wakeEvents.forEach(function (ev) { window.removeEventListener(ev, startAnim); });
+      tick();
+    };
+    wakeEvents.forEach(function (ev) { window.addEventListener(ev, startAnim, { passive: true }); });
+    setTimeout(startAnim, 4000);
+  }
   }
 
   // Defer heavy WebGL init until the main thread is idle so the hero text
