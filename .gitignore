@@ -2,5 +2,6 @@
 uploads/
 *.docx
 *.pdf
+!cv.pdf
 .DS_Store
 Thumbs.db
