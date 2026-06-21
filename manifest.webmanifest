@@ -1,7 +1,7 @@
 {
-  "name": "Saifeddine Makhlouf — Lead Full-Stack Developer",
+  "name": "Saifeddine Makhlouf — Full-Stack Developer",
   "short_name": "Saif.Makhlouf",
-  "description": "Three.js-driven portfolio of Saifeddine Makhlouf — Lead Full-Stack Developer specializing in React Native, Spring Boot and AI/ML platforms.",
+  "description": "Three.js-driven portfolio of Saifeddine Makhlouf — Full-Stack Developer specializing in React, Node.js, TypeScript and GenAI / LLM integrations.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

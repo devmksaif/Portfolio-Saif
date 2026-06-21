@@ -18,14 +18,14 @@
 
   // ---- text sprites for each skill ----
   const SKILLS = [
-    'React Native', 'TypeScript', 'Node.js', 'Spring Boot', 'Next.js',
-    'PostgreSQL', 'MongoDB', 'Docker', 'Kubernetes', 'GraphQL',
-    'WebRTC', 'WebSockets', 'Firebase', 'Supabase', 'Tailwind',
-    'NestJS', 'Python', 'TensorFlow', 'PyTorch', 'OpenAI',
-    'LangChain', 'RAG', 'Express', 'Redux', 'Recoil',
-    'Stripe', 'Clerk', 'OAuth2', 'JWT', 'Prisma',
-    'TypeORM', 'FastAPI', 'Flask', 'Java', 'C++',
-    'GCP', 'CI/CD', 'Git', 'Lottie', 'MUI',
+    'React', 'Next.js', 'TypeScript', 'Node.js', 'Express',
+    'NestJS', 'REST', 'GraphQL', 'Microservices', 'WebSockets',
+    'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Supabase',
+    'Prisma', 'TypeORM', 'OpenAI', 'Gemini', 'LangChain',
+    'RAG', 'Multi-Agent', 'FastAPI', 'React Native', 'Expo',
+    'EAS', 'WebRTC', 'Firebase', 'Docker', 'Kubernetes',
+    'CI/CD', 'GCP', 'AWS', 'Kafka', 'Stripe',
+    'Clerk', 'JWT', 'OAuth2', 'Spring Boot', 'Python',
   ];
 
   function makeLabel(text, color) {

@@ -4,25 +4,25 @@
     <title>Saifeddine Makhlouf — Portfolio Updates</title>
     <link>https://saifeddine.tech/</link>
     <atom:link href="https://saifeddine.tech/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Project launches, role changes and engineering notes from Saifeddine Makhlouf — Lead Full-Stack Developer.</description>
+    <description>Project launches, role changes and engineering notes from Saifeddine Makhlouf — Full-Stack Developer.</description>
     <language>en-us</language>
     <copyright>© 2026 Saifeddine Makhlouf</copyright>
     <managingEditor>saifeddine.ben.makhlouf@gmail.com (Saifeddine Makhlouf)</managingEditor>
     <webMaster>saifeddine.ben.makhlouf@gmail.com (Saifeddine Makhlouf)</webMaster>
-    <pubDate>Sat, 25 Apr 2026 00:00:00 +0100</pubDate>
-    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0100</lastBuildDate>
+    <pubDate>Sun, 21 Jun 2026 00:00:00 +0100</pubDate>
+    <lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0100</lastBuildDate>
     <category>Software Engineering</category>
-    <category>Mobile Development</category>
-    <category>AI / ML</category>
+    <category>Full-Stack Development</category>
+    <category>GenAI / LLM</category>
     <ttl>1440</ttl>
 
     <item>
-      <title>Promoted to Lead Full-Stack Developer at YOTSYSTEM</title>
+      <title>Joined YOTSYSTEM as Full-Stack Developer</title>
       <link>https://saifeddine.tech/#experience</link>
-      <guid isPermaLink="false">yotsystem-lead-2026-01</guid>
+      <guid isPermaLink="false">yotsystem-fullstack-2026-01</guid>
       <pubDate>Thu, 15 Jan 2026 09:00:00 +0100</pubDate>
       <dc:creator>Saifeddine Makhlouf</dc:creator>
-      <description>Now leading engineering teams at YOTSYSTEM — architecting Spring Boot microservices and React Native mobile apps for AI-powered yacht management.</description>
+      <description>Building and owning platform features at YOTSYSTEM across React, Node.js/TypeScript and React Native — backend handling 50K+ API requests/day for AI-powered yacht management.</description>
     </item>
 
     <item>
@@ -31,7 +31,7 @@
       <guid isPermaLink="false">juliabot-v2-2026</guid>
       <pubDate>Mon, 02 Mar 2026 12:00:00 +0100</pubDate>
       <dc:creator>Saifeddine Makhlouf</dc:creator>
-      <description>Enterprise AI platform now in production with Web3/blockchain architecture, JWT RBAC and full Kubernetes deployment.</description>
+      <description>Multi-agent GenAI platform now in production with 7 specialised agents, JWT RBAC and full Kubernetes deployment.</description>
     </item>
 
     <item>

@@ -73,5 +73,6 @@ User-agent: DotBot
 Disallow: /
 
 # === Sitemaps ===
+Sitemap: https://saifeddine.tech/sitemap-v2.xml
 Sitemap: https://saifeddine.tech/sitemap.xml
 Sitemap: https://saifeddine.tech/sitemap.html
