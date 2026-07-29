@@ -10,7 +10,6 @@ Disallow: /draft/
 Disallow: /private/
 Disallow: /*.json$
 Disallow: /*?s=
-Crawl-delay: 1
 
 # === Friendly bots: explicit allow ===
 User-agent: Googlebot
@@ -73,6 +72,6 @@ User-agent: DotBot
 Disallow: /
 
 # === Sitemaps ===
-Sitemap: https://saifeddine.tech/sitemap-v2.xml
-Sitemap: https://saifeddine.tech/sitemap.xml
-Sitemap: https://saifeddine.tech/sitemap.html
+# One XML sitemap only. The `Sitemap:` directive must point at an XML or
+# plain-text sitemap — sitemap.html is an HTML page and was rejected here.
+Sitemap: https://saifeddine.tech/sitemap-v3.xml

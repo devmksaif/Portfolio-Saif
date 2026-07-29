@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SINGLE SOURCE OF TRUTH for indexable URLs. Edit only this file.
+  /sitemap.xml and /sitemap-v2.xml are sitemap-index files that point here.
+
+  Rules enforced below:
+   - Only canonical, indexable pages. Fragment URLs (/#about, /#projects, ...)
+     are excluded: Google cannot index URLs containing anchor fragments.
+   - No <changefreq> / <priority>: Google ignores both tags.
+   - <lastmod> reflects the last SIGNIFICANT content change to each page
+     (git: 2026-06-21). Do not bump it unless page content actually changes —
+     Google only trusts lastmod when it is consistently accurate.
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ===== HOME (English) ===== -->
+  <url>
+    <loc>https://saifeddine.tech/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saifeddine.tech/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://saifeddine.tech/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saifeddine.tech/" />
+    <image:image>
+      <image:loc>https://saifeddine.tech/og-cover.png</image:loc>
+      <image:title>Saifeddine Makhlouf — Full-Stack Developer</image:title>
+      <image:caption>Three.js portfolio cover — constellation of project nodes on deep space backdrop.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ===== HOME (French) ===== -->
+  <url>
+    <loc>https://saifeddine.tech/fr/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saifeddine.tech/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://saifeddine.tech/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saifeddine.tech/" />
+    <image:image>
+      <image:loc>https://saifeddine.tech/og-cover.png</image:loc>
+      <image:title>Saifeddine Makhlouf — Développeur Full-Stack</image:title>
+    </image:image>
+  </url>
+
+  <!-- ===== RÉSUMÉ (PDFs are indexable) ===== -->
+  <url>
+    <loc>https://saifeddine.tech/cv.pdf</loc>
+    <lastmod>2026-06-21</lastmod>
+  </url>
+
+</urlset>

@@ -2,7 +2,21 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "framework": null,
+  "redirects": [
+    { "source": "/public/cv.pdf", "destination": "/cv.pdf", "permanent": true },
+    { "source": "/public/index.html", "destination": "/", "permanent": true },
+    { "source": "/public/:path*", "destination": "/", "permanent": true }
+  ],
   "headers": [
+    {
+      "source": "/uploads/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
     {
       "source": "/(.+\\.js|.+\\.css)",
       "headers": [
