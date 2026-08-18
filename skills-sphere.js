@@ -28,14 +28,20 @@
 
   // ---- text sprites for each skill ----
   const SKILLS = [
-    'React', 'Next.js', 'TypeScript', 'Node.js', 'Express',
-    'NestJS', 'REST', 'GraphQL', 'Microservices', 'WebSockets',
-    'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Supabase',
-    'Prisma', 'TypeORM', 'OpenAI', 'Gemini', 'LangChain',
-    'RAG', 'Multi-Agent', 'FastAPI', 'React Native', 'Expo',
-    'EAS', 'WebRTC', 'Firebase', 'Docker', 'Kubernetes',
-    'CI/CD', 'GCP', 'AWS', 'Kafka', 'Stripe',
-    'Clerk', 'JWT', 'OAuth2', 'Spring Boot', 'Python',
+    // Frontend
+    'React', 'Next.js', 'Vue.js', 'Remix', 'TypeScript', 'Redux', 'Tailwind', 'MUI', 'Shadcn/UI',
+    // Backend
+    'Node.js', 'Express', 'NestJS', 'Hapi.js', 'Go', 'Spring Boot', 'Laravel', 'FastAPI', 'Flask', 'GraphQL', 'Microservices', 'WebSockets',
+    // GenAI / LLM
+    'OpenAI', 'Gemini', 'DeepSeek', 'LangChain', 'LangGraph', 'RAG', 'Multi-Agent', 'Embeddings', 'ElevenLabs',
+    // Databases
+    'PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'SQLite', 'Supabase', 'Prisma',
+    // Systems
+    'C', 'C++17', 'LLVM', 'OpenGL', 'ImGui', 'GTK', 'Compilers',
+    // Mobile
+    'React Native', 'Expo', 'Flutter', 'WebRTC',
+    // DevOps / Cloud
+    'Docker', 'Kubernetes',
   ];
 
   function makeLabel(text, color) {
@@ -56,7 +62,7 @@
     tex.minFilter = THREE.LinearFilter;
     const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
     const sp = new THREE.Sprite(mat);
-    sp.scale.set(4, 1, 1);
+    sp.scale.set(3.4, 0.85, 1);
     return sp;
   }
 
