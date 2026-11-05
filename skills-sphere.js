@@ -7,6 +7,10 @@
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
 
+  // The render loop only runs while the scene is near the viewport.
+  let isVisible = false;
+  let wake = null;
+
   // Lazy-init: only build this WebGL scene when it scrolls near the viewport,
   // keeping it off the critical path at page load.
   let started = false;
@@ -24,7 +28,7 @@
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
-  camera.position.z = 18;
+  camera.position.z = isMobile ? 28 : 18;
 
   // ---- text sprites for each skill ----
   const SKILLS = [
@@ -101,22 +105,32 @@
   ]);
   group.add(new THREE.Line(poleGeom, new THREE.LineBasicMaterial({ color: 0x00d4ff, transparent: true, opacity: 0.2 })));
 
-  // mouse drag/parallax
+  // drag (mouse, touch, pen), plus hover parallax kept as a separate offset
   let dragX = 0, dragY = 0, targetX = 0, targetY = 0;
+  let parallaxX = 0, parallaxY = 0;
   let down = false, lastX = 0, lastY = 0;
-  host.addEventListener('mousedown', (e) => { down = true; lastX = e.clientX; lastY = e.clientY; });
-  window.addEventListener('mouseup', () => down = false);
-  window.addEventListener('mousemove', (e) => {
+  host.addEventListener('pointerdown', (e) => {
+    down = true; lastX = e.clientX; lastY = e.clientY;
+    host.classList.add('dragging');
+  });
+  function endDrag() {
+    down = false;
+    host.classList.remove('dragging');
+  }
+  window.addEventListener('pointerup', endDrag);
+  window.addEventListener('pointercancel', endDrag);
+  window.addEventListener('pointermove', (e) => {
     if (down) {
       targetY += (e.clientX - lastX) * 0.005;
       targetX += (e.clientY - lastY) * 0.005;
       lastX = e.clientX; lastY = e.clientY;
-    } else {
+      if (reduceMotion) tick();
+    } else if (!reduceMotion && e.pointerType === 'mouse') {
       // parallax follow when over host
       const r = host.getBoundingClientRect();
       if (e.clientX > r.left && e.clientX < r.right && e.clientY > r.top && e.clientY < r.bottom) {
-        targetY = ((e.clientX - r.left) / r.width - 0.5) * 1.2;
-        targetX = ((e.clientY - r.top) / r.height - 0.5) * 0.6;
+        parallaxY = ((e.clientX - r.left) / r.width - 0.5) * 1.2;
+        parallaxX = ((e.clientY - r.top) / r.height - 0.5) * 0.6;
       }
     }
   });
@@ -130,27 +144,46 @@
   window.addEventListener('resize', resize);
 
   const clock = new THREE.Clock();
+  let running = false;
   function tick() {
-    const t = clock.getElapsedTime();
-    dragX += (targetX - dragX) * 0.05;
-    dragY += (targetY - dragY) * 0.05;
+    const t = reduceMotion ? 0 : clock.getElapsedTime();
+    if (reduceMotion) {
+      dragX = targetX;
+      dragY = targetY;
+    } else {
+      dragX += (targetX + parallaxX - dragX) * 0.05;
+      dragY += (targetY + parallaxY - dragY) * 0.05;
+    }
 
     group.rotation.y = dragY + t * 0.1;
     group.rotation.x = dragX * 0.5;
 
     // billboard sprites toward camera (sprites are auto-billboarded)
     renderer.render(scene, camera);
-    if (!reduceMotion) requestAnimationFrame(tick);
+    if (!reduceMotion && isVisible) requestAnimationFrame(tick);
+    else running = false;
   }
-  tick();
+  wake = function () {
+    if (running || reduceMotion) return;
+    running = true;
+    tick();
+  };
+  if (reduceMotion) tick(); else wake();
+  }
+
+  // If WebGL or three.js is unavailable, drop the empty box: the HTML carries the content.
+  function start() {
+    try { init(); } catch (e) { host.hidden = true; }
   }
 
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(function (entries) {
-      if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); init(); }
+      isVisible = entries[entries.length - 1].isIntersecting;
+      if (isVisible) { start(); if (wake) wake(); }
     }, { rootMargin: '300px' });
     io.observe(host);
   } else {
-    init();
+    isVisible = true;
+    start();
   }
 })();

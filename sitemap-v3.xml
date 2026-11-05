@@ -19,7 +19,7 @@
   <!-- ===== HOME (English) ===== -->
   <url>
     <loc>https://saifeddine.tech/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://saifeddine.tech/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://saifeddine.tech/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://saifeddine.tech/" />
@@ -33,7 +33,7 @@
   <!-- ===== HOME (French) ===== -->
   <url>
     <loc>https://saifeddine.tech/fr/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://saifeddine.tech/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://saifeddine.tech/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://saifeddine.tech/" />
@@ -46,7 +46,11 @@
   <!-- ===== RÉSUMÉ (PDFs are indexable) ===== -->
   <url>
     <loc>https://saifeddine.tech/cv.pdf</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://saifeddine.tech/cv-fr.pdf</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
 
 </urlset>

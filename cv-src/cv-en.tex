@@ -1,0 +1,112 @@
+% English CV. Build with cv-src/build.sh, which writes ../cv.pdf.
+\input{cv-style.tex}
+\hypersetup{pdftitle={Saifeddine Makhlouf - CV},pdfauthor={Saifeddine Makhlouf},pdflang={en}}
+
+\begin{document}
+\cvheader{Saifeddine Makhlouf}
+  {Full-Stack Developer | React, Node.js, TypeScript | GenAI / LLM and Agentic Systems}
+  {Tunis, Tunisia | +216 20 099 922 | \href{mailto:saifeddine.ben.makhlouf@gmail.com}{saifeddine.ben.makhlouf@gmail.com} | \href{https://saifeddine.tech}{saifeddine.tech} | \href{https://github.com/devmksaif}{github.com/devmksaif}}
+
+\section{PROFESSIONAL EXPERIENCE}
+
+\role{Full-Stack Developer, YOTSYSTEM (Full-time)}
+  {January 2026 - Present | Tunis, Tunisia (Hybrid) | AI-powered yacht management and digital transformation}
+\begin{itemize}
+  \item Build and own platform features across React, NestJS, TypeScript, and React Native in a 4-engineer team, running sprints and reviewing 100\% of pull requests.
+  \item Designed core backend architecture (NestJS main backend) across PostgreSQL and MongoDB handling 50,000+ API requests per day via REST and event-driven services.
+  \item Built secure microservices, API gateways, and JWT/RBAC authentication flows powering production traffic; delivered the React.js back-office admin interface.
+  \item Built Sonar AI, an agentic business-research back-office (React.js, MUI, LangGraph) that autonomously compiles complete business profiles (contacts, websites, insights), processing 1,000+ listings in bulk in under 15 minutes and replacing 15-30 minutes of manual research per business (99\% time reduction).
+  \item Shipped a cross-platform React Native and TypeScript mobile app with real-time WebSockets and Firebase against the same NestJS backend.
+  \item Set up GitHub Actions CI/CD with Docker across staging and production, cutting release time by 60\%; delivered 5+ major releases working directly with C-level stakeholders.
+\end{itemize}
+
+\role{Software Engineering Intern (PFE), CineBox (Part-time, concurrent)}
+  {February 2026 - June 2026 | Tunisia | Cinema ticket booking platform (customer and admin)}
+\begin{itemize}
+  \item Built a responsive React.js front-end with reusable component architecture across customer booking and admin back-office flows (25 screens).
+  \item Engineered a Spring Boot and Hibernate backend across 12 relational entities, sustaining 10,000 concurrent booking sessions in load tests.
+  \item Implemented Apache Kafka event streaming for real-time seat-locking, achieving zero double-bookings across 10,000 concurrent sessions with confirmation latency under 100 ms.
+\end{itemize}
+
+\role{Freelance Full-Stack and GenAI Developer, Upwork / Fiverr}
+  {April 2022 - December 2025 | Remote | 20+ production projects for international clients across web, mobile, and SaaS}
+\begin{itemize}
+  \item CraftGent: SaaS GenAI chatbot builder solving custom chatbot development costs for SMBs; multi-channel LLM platform (web widgets, SMS, Discord, Instagram, Facebook) with real-time analytics, Stripe billing, and 100+ customization options. Serves 1,000+ users across 700+ businesses, processing 100,000+ messages per month and automating an estimated 80\% of routine customer queries. Stack: React, Node.js, Express, MongoDB, WebSockets, OpenAI GPT-4, Gemini.
+  \item JuliaBot: Multi-agent GenAI platform replacing single-purpose chatbots with 7 specialized agents (Chat, Research, Medical, RAG), JWT RBAC, and 11-language i18n serving 500+ registered users. Stack: Next.js 15, NestJS, PostgreSQL, TypeORM, Docker, Kubernetes, Stripe.
+  \item Calliverse: Social networking app with real-time messaging, video calls, and premium subscriptions. 1,000+ Google Play downloads with a 99\%+ crash-free session rate. Stack: React Native, TypeScript, Node.js, Supabase, WebRTC, Clerk, Stripe.
+  \item Blink Delivery: Grocery delivery app with live order tracking, multi-address delivery, coupon engine, and offline support. 2,000+ Google Play downloads, 5,000+ orders processed, 99\%+ crash-free session rate. Stack: React Native, TypeScript, Node.js, WebSockets, Supabase, Stripe.
+  \item Africa Creative Talent Expo: FinTech app with cashback rewards, proprietary voting currency, and real-time transaction processing. Stack: React Native, Node.js, Express, Supabase, Clerk, WebSockets.
+\end{itemize}
+
+\role{Software Engineering Intern, TOPNET}
+  {January 2025 - February 2025 | Tunisia (Hybrid)}
+\begin{itemize}
+  \item Built a no-code chatbot builder platform from scratch using React.js, Node.js, and NLP APIs; redesigned NLP conversation flows, increasing queries resolved without human escalation by 25\%.
+\end{itemize}
+
+\section{PERSONAL PROJECTS}
+
+\project{\textbf{MagicScript}: From-scratch statically-typed, garbage-collected programming language (40,000+ lines of C++): one AST driving a tree-walking interpreter and an LLVM-IR compiler (clang, Boehm GC) with byte-identical output guaranteed across 1,141 tests. Generics, traits, null safety, green threads and channels, 13-module self-hosted standard library (http, json, sqlite, gfx3d), code formatter, Language Server (LSP), and VS Code extension.}
+  {Stack: C++17, LLVM, Boehm GC, CMake, GoogleTest}
+
+\project{\textbf{RazenEngine}: Custom 3D game engine built from scratch with an ImGui editor and debug interface.}
+  {Stack: C++, OpenGL, ImGui}
+
+\project{\textbf{Flowify}: AI prompt-to-workflow SaaS (n8n-style) removing the automation-tool learning curve: natural language compiled into executable workflows via LLM tool calling; 500+ workflows generated with roughly 90\% valid on first generation.}
+  {Stack: Go, MongoDB, Next.js, LangChain, LangGraph}
+
+\project{\textbf{TikAi}: Prompt-to-video AI editor: merges clips, auto-generates voice-overs and subtitles, and renders the final video from a single prompt, cutting 2-3 hours of manual editing to under 5 minutes end-to-end; 100+ videos rendered.}
+  {Stack: Python, FFmpeg, MoviePy, LangChain, LangGraph, ElevenLabs API, DeepSeek API}
+
+\project{\textbf{EduAI}: AI learning platform (NotebookLM-style) preparing students for exams with flashcards, quizzes, and mock exams over an agentic RAG pipeline; 10,000+ study items (flashcards, quizzes) generated from user course material.}
+  {Stack: Python, React.js, LangChain, Google Gemini API}
+
+\project{\textbf{FindPoint}: AI ATS recruiter platform: RAG and cosine-similarity embedding matching for precise CV-to-job filtering, ranking hundreds of CVs per opening in minutes instead of days of manual screening.}
+  {Stack: Vue.js, Python, LangChain}
+
+\project{\textbf{Network Threat Classification Engine (IEEE AI Challenge, National Winner)}: Machine learning engine classifying network threats (DDoS and other attack classes) from incoming and outgoing packet features; 98\% classification accuracy on public intrusion-detection datasets.}
+  {Stack: Python, supervised ML pipeline}
+
+\project{\textbf{Dar (Play Store launch imminent)}: Airbnb-style rental marketplace for Tunisian locals and tourists with OTP phone authentication; launching with 100+ initial property listings.}
+  {Stack: React Native, Supabase, Firebase}
+
+\project{\textbf{Win Mechi}: Carpooling app with real-time trip tracking on fully self-hosted mapping infrastructure (own Valhalla routing engine, open-source tile renderer and rasterizer server), reducing marginal routing cost to \$0 versus roughly \$5 per 1,000 requests on commercial Maps APIs.}
+  {Stack: React Native, WebSockets, Firebase, Hapi.js, Valhalla, OpenStreetMap}
+
+\project{\textbf{Echri}: Shopify-like multi-vendor e-commerce platform: unlimited stores per platform with vendor-isolated inventory management and role-based admin dashboards.}
+  {Stack: React.js, Spring Boot}
+
+\project{\textbf{RENTED}: Peer-to-peer rental marketplace for renting everyday items instead of buying them.}
+  {Stack: Laravel (PHP), Flutter}
+
+\project{\textbf{Shrimp Time}: Restaurant website and landing page handling table bookings, reservations, and POS.}
+  {Stack: Remix (React)}
+
+\project{\textbf{Khazna}: Point-of-sale and cash management desktop application (Gestion de Caisse) with local persistence; re-implemented in Python.}
+  {Stack: C, GTK, SQLite, Python}
+
+\section{SKILLS}
+\textbf{Frontend:} React.js, Next.js 15, Vue.js, Remix, TypeScript, Redux, Recoil, Tailwind CSS, MUI, Shadcn/UI\\
+\textbf{Backend:} Node.js, Express.js, NestJS, Hapi.js, Go, Spring Boot (Java), Laravel (PHP), Python (FastAPI, Flask), REST, GraphQL, Microservices, WebSockets\\
+\textbf{GenAI / LLM:} OpenAI GPT-4, Gemini, DeepSeek, LangChain, LangGraph, RAG, Multi-Agent Systems, Embeddings, Cosine Similarity, ElevenLabs, Conversational AI\\
+\textbf{Systems:} C, C++17, LLVM, OpenGL, ImGui, GTK, Compilers, Interpreters, Language Servers (LSP)\\
+\textbf{Databases:} PostgreSQL, MongoDB, MySQL, Redis, SQLite, Supabase, Prisma, TypeORM\\
+\textbf{Mobile:} React Native, Expo, EAS Build, Flutter, WebRTC, Firebase, Push Notifications, Offline Sync\\
+\textbf{DevOps and Cloud:} Docker, Kubernetes, GitHub Actions, GCP, AWS, Apache Kafka, Self-hosted Valhalla routing and tile servers\\
+\textbf{Payments and Auth:} Stripe, Clerk, JWT, OAuth 2.0, RBAC\\
+\textbf{Machine Learning:} Threat classification, supervised learning on network traffic datasets\\
+\textbf{Programming Languages:} JavaScript, TypeScript, Python, Java, Go, PHP, C, C++
+
+\section{EDUCATION}
+\textbf{Bachelor of Science in Computer Science, ISET Djerba (Higher Institute of Technological Studies)}\\
+2023 - June 2026 | Tunisia | Graduated with Honors
+
+\section{ACHIEVEMENTS AND CERTIFICATIONS}
+\begin{itemize}
+  \item National Winner, IEEE AI Challenge (Cybersecurity and Machine Learning)
+  \item Google Cloud Platform Fundamentals; Google Kubernetes Engine; React Native (Udemy)
+\end{itemize}
+
+\section{LANGUAGES}
+English: C2 (Proficient) | French: C1 (Advanced) | Arabic: Native
+\end{document}
