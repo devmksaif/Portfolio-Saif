@@ -1,0 +1,112 @@
+% CV en français. Compiler avec cv-src/build.sh, qui écrit ../cv-fr.pdf.
+\input{cv-style.tex}
+\hypersetup{pdftitle={Saifeddine Makhlouf - CV},pdfauthor={Saifeddine Makhlouf},pdflang={fr}}
+
+\begin{document}
+\cvheader{Saifeddine Makhlouf}
+  {Développeur Full-Stack | React, Node.js, TypeScript | GenAI / LLM et systèmes agentiques}
+  {Tunis, Tunisie | +216 20 099 922 | \href{mailto:saifeddine.ben.makhlouf@gmail.com}{saifeddine.ben.makhlouf@gmail.com} | \href{https://saifeddine.tech/fr/}{saifeddine.tech} | \href{https://github.com/devmksaif}{github.com/devmksaif}}
+
+\section{EXPÉRIENCE PROFESSIONNELLE}
+
+\role{Développeur Full-Stack, YOTSYSTEM (temps plein)}
+  {Janvier 2026 - Aujourd'hui | Tunis, Tunisie (hybride) | Gestion de yachts par IA et transformation numérique}
+\begin{itemize}
+  \item Développement et prise en charge de fonctionnalités plateforme en React, NestJS, TypeScript et React Native au sein d'une équipe de 4 ingénieurs~: animation des sprints et relecture de 100~\% des pull requests.
+  \item Conception de l'architecture backend principale (NestJS) sur PostgreSQL et MongoDB, traitant plus de 50~000 requêtes API par jour via des services REST et événementiels.
+  \item Création de microservices sécurisés, de passerelles d'API et de flux d'authentification JWT/RBAC pour le trafic de production~; livraison de l'interface d'administration back-office en React.js.
+  \item Création de Sonar AI, un back-office agentique de recherche d'entreprises (React.js, MUI, LangGraph) qui compile de façon autonome des profils complets (contacts, sites web, insights)~: plus de 1~000 fiches traitées en bloc en moins de 15 minutes, remplaçant 15 à 30 minutes de recherche manuelle par entreprise (réduction de 99~\%).
+  \item Livraison d'une application mobile multiplateforme React Native et TypeScript avec WebSockets temps réel et Firebase, sur le même backend NestJS.
+  \item Mise en place de la CI/CD GitHub Actions avec Docker en staging et en production, réduisant le temps de mise en production de 60~\%~; plus de 5 versions majeures livrées en lien direct avec la direction.
+\end{itemize}
+
+\role{Stagiaire Ingénieur Logiciel (PFE), CineBox (temps partiel, en parallèle)}
+  {Février 2026 - Juin 2026 | Tunisie | Plateforme de réservation de billets de cinéma (client et administration)}
+\begin{itemize}
+  \item Développement d'un front-end React.js responsive avec une architecture de composants réutilisables, couvrant les parcours de réservation client et le back-office d'administration (25 écrans).
+  \item Conception d'un backend Spring Boot et Hibernate sur 12 entités relationnelles, tenant 10~000 sessions de réservation simultanées en tests de charge.
+  \item Mise en œuvre du streaming d'événements Apache Kafka pour le verrouillage des sièges en temps réel~: aucune double réservation sur 10~000 sessions simultanées et une latence de confirmation inférieure à 100 ms.
+\end{itemize}
+
+\role{Développeur Freelance Full-Stack et GenAI, Upwork / Fiverr}
+  {Avril 2022 - Décembre 2025 | À distance | Plus de 20 projets en production pour des clients internationaux (web, mobile et SaaS)}
+\begin{itemize}
+  \item CraftGent~: SaaS de création de chatbots GenAI réduisant le coût du développement sur mesure pour les PME~; plateforme LLM multicanal (widgets web, SMS, Discord, Instagram, Facebook) avec analytique en temps réel, facturation Stripe et plus de 100 options de personnalisation. Plus de 1~000 utilisateurs répartis sur plus de 700 entreprises, plus de 100~000 messages par mois et environ 80~\% des demandes clients courantes automatisées (estimation). Stack~: React, Node.js, Express, MongoDB, WebSockets, OpenAI GPT-4, Gemini.
+  \item JuliaBot~: plateforme GenAI multi-agents remplaçant les chatbots à usage unique, avec 7 agents spécialisés (Chat, Recherche, Médical, RAG), RBAC par JWT et internationalisation en 11 langues, pour plus de 500 utilisateurs inscrits. Stack~: Next.js 15, NestJS, PostgreSQL, TypeORM, Docker, Kubernetes, Stripe.
+  \item Calliverse~: application de réseau social avec messagerie en temps réel, appels vidéo et abonnements premium. Plus de 1~000 téléchargements sur Google Play et plus de 99~\% de sessions sans plantage. Stack~: React Native, TypeScript, Node.js, Supabase, WebRTC, Clerk, Stripe.
+  \item Blink Delivery~: application de livraison d'épicerie avec suivi de commande en direct, livraison multi-adresses, moteur de coupons et support hors ligne. Plus de 2~000 téléchargements sur Google Play, plus de 5~000 commandes traitées et plus de 99~\% de sessions sans plantage. Stack~: React Native, TypeScript, Node.js, WebSockets, Supabase, Stripe.
+  \item Africa Creative Talent Expo~: application FinTech avec cashback, monnaie de vote propriétaire et traitement des transactions en temps réel. Stack~: React Native, Node.js, Express, Supabase, Clerk, WebSockets.
+\end{itemize}
+
+\role{Stagiaire Ingénieur Logiciel, TOPNET}
+  {Janvier 2025 - Février 2025 | Tunisie (hybride)}
+\begin{itemize}
+  \item Création d'une plateforme no-code de création de chatbots à partir de zéro avec React.js, Node.js et des API de NLP~; refonte des flux conversationnels NLP, augmentant de 25~\% les demandes résolues sans escalade humaine.
+\end{itemize}
+
+\section{PROJETS PERSONNELS}
+
+\project{\textbf{MagicScript}~: langage de programmation à typage statique et ramasse-miettes, créé de zéro (plus de 40~000 lignes de C++)~: un même AST pilote un interpréteur et un compilateur LLVM-IR (clang, Boehm GC), avec une sortie identique octet pour octet garantie sur 1~141 tests. Génériques, traits, null safety, green threads et canaux, bibliothèque standard auto-hébergée de 13 modules (http, json, sqlite, gfx3d), formateur de code, Language Server (LSP) et extension VS Code.}
+  {Stack~: C++17, LLVM, Boehm GC, CMake, GoogleTest}
+
+\project{\textbf{RazenEngine}~: moteur de jeu 3D sur mesure créé de zéro, avec un éditeur et une interface de débogage en ImGui.}
+  {Stack~: C++, OpenGL, ImGui}
+
+\project{\textbf{Flowify}~: SaaS de prompt-to-workflow (style n8n) supprimant la courbe d'apprentissage des outils d'automatisation~: le langage naturel est compilé en workflows exécutables via le tool calling LLM~; plus de 500 workflows générés, dont environ 90~\% valides dès la première génération.}
+  {Stack~: Go, MongoDB, Next.js, LangChain, LangGraph}
+
+\project{\textbf{TikAi}~: éditeur vidéo IA prompt-to-video~: fusionne les clips, génère automatiquement voix off et sous-titres, et produit la vidéo finale à partir d'un seul prompt, passant de 2 à 3 heures de montage manuel à moins de 5 minutes de bout en bout~; plus de 100 vidéos produites.}
+  {Stack~: Python, FFmpeg, MoviePy, LangChain, LangGraph, API ElevenLabs, API DeepSeek}
+
+\project{\textbf{EduAI}~: plateforme d'apprentissage par IA (style NotebookLM) préparant les étudiants aux examens avec des flashcards, des quiz et des examens blancs sur un pipeline RAG agentique~; plus de 10~000 contenus d'étude (flashcards, quiz) générés à partir des cours des utilisateurs.}
+  {Stack~: Python, React.js, LangChain, API Google Gemini}
+
+\project{\textbf{FindPoint}~: plateforme ATS de recrutement par IA~: RAG et correspondance d'embeddings par similarité cosinus pour filtrer précisément les CV par poste, classant des centaines de CV par offre en quelques minutes au lieu de plusieurs jours de tri manuel.}
+  {Stack~: Vue.js, Python, LangChain}
+
+\project{\textbf{Moteur de classification des menaces réseau (IEEE AI Challenge, vainqueur national)}~: moteur de machine learning classifiant les menaces réseau (DDoS et autres classes d'attaque) à partir des caractéristiques des paquets entrants et sortants~; 98~\% de précision sur des jeux de données publics de détection d'intrusion.}
+  {Stack~: Python, pipeline de ML supervisé}
+
+\project{\textbf{Dar (lancement imminent sur le Play Store)}~: marketplace de location style Airbnb pour les Tunisiens et les touristes, avec authentification OTP par téléphone~; lancement avec plus de 100 annonces initiales.}
+  {Stack~: React Native, Supabase, Firebase}
+
+\project{\textbf{Win Mechi}~: application de covoiturage avec suivi de trajet en temps réel sur une infrastructure cartographique entièrement auto-hébergée (moteur de routage Valhalla, serveurs open source de rendu et de rastérisation de tuiles), réduisant le coût marginal de routage à 0~\$ contre environ 5~\$ pour 1~000 requêtes sur les API Maps commerciales.}
+  {Stack~: React Native, WebSockets, Firebase, Hapi.js, Valhalla, OpenStreetMap}
+
+\project{\textbf{Echri}~: plateforme e-commerce multi-vendeurs type Shopify~: boutiques illimitées par plateforme, gestion d'inventaire isolée par vendeur et tableaux de bord d'administration basés sur les rôles.}
+  {Stack~: React.js, Spring Boot}
+
+\project{\textbf{RENTED}~: marketplace de location pair-à-pair pour louer des objets du quotidien au lieu de les acheter.}
+  {Stack~: Laravel (PHP), Flutter}
+
+\project{\textbf{Shrimp Time}~: site web et landing page de restaurant gérant les réservations de tables et le point de vente.}
+  {Stack~: Remix (React)}
+
+\project{\textbf{Khazna}~: application desktop de point de vente et de gestion de caisse avec persistance locale~; ré-implémentée en Python.}
+  {Stack~: C, GTK, SQLite, Python}
+
+\section{COMPÉTENCES}
+\textbf{Frontend~:} React.js, Next.js 15, Vue.js, Remix, TypeScript, Redux, Recoil, Tailwind CSS, MUI, Shadcn/UI\\
+\textbf{Backend~:} Node.js, Express.js, NestJS, Hapi.js, Go, Spring Boot (Java), Laravel (PHP), Python (FastAPI, Flask), REST, GraphQL, microservices, WebSockets\\
+\textbf{GenAI / LLM~:} OpenAI GPT-4, Gemini, DeepSeek, LangChain, LangGraph, RAG, systèmes multi-agents, embeddings, similarité cosinus, ElevenLabs, IA conversationnelle\\
+\textbf{Systèmes~:} C, C++17, LLVM, OpenGL, ImGui, GTK, compilateurs, interpréteurs, Language Servers (LSP)\\
+\textbf{Bases de données~:} PostgreSQL, MongoDB, MySQL, Redis, SQLite, Supabase, Prisma, TypeORM\\
+\textbf{Mobile~:} React Native, Expo, EAS Build, Flutter, WebRTC, Firebase, notifications push, synchronisation hors ligne\\
+\textbf{DevOps et Cloud~:} Docker, Kubernetes, GitHub Actions, GCP, AWS, Apache Kafka, serveurs Valhalla et de tuiles auto-hébergés\\
+\textbf{Paiements et authentification~:} Stripe, Clerk, JWT, OAuth 2.0, RBAC\\
+\textbf{Machine Learning~:} classification de menaces, apprentissage supervisé sur des jeux de données de trafic réseau\\
+\textbf{Langages de programmation~:} JavaScript, TypeScript, Python, Java, Go, PHP, C, C++
+
+\section{FORMATION}
+\textbf{Licence en Informatique, ISET Djerba (Institut Supérieur des Études Technologiques)}\\
+2023 - Juin 2026 | Tunisie | Diplômé avec mention
+
+\section{DISTINCTIONS ET CERTIFICATIONS}
+\begin{itemize}
+  \item Vainqueur national, IEEE AI Challenge (cybersécurité et machine learning)
+  \item Google Cloud Platform Fundamentals~; Google Kubernetes Engine~; React Native (Udemy)
+\end{itemize}
+
+\section{LANGUES}
+Français~: C1 (avancé) | Anglais~: C2 (maîtrise) | Arabe~: langue maternelle
+\end{document}
