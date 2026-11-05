@@ -1,5 +1,5 @@
 /* TEAM */
-  Full-Stack Developer: Saifeddine Makhlouf
+  Lead Full-Stack Developer: Saifeddine Makhlouf
   Site: https://saifeddine.tech/
   GitHub: @devmksaif
   Email: saifeddine.ben.makhlouf [at] gmail.com
