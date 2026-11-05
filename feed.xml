@@ -4,7 +4,7 @@
     <title>Saifeddine Makhlouf — Portfolio Updates</title>
     <link>https://saifeddine.tech/</link>
     <atom:link href="https://saifeddine.tech/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Project launches, role changes and engineering notes from Saifeddine Makhlouf — Full-Stack Developer.</description>
+    <description>Project launches, role changes and engineering notes from Saifeddine Makhlouf — Lead Full-Stack Developer.</description>
     <language>en-us</language>
     <copyright>© 2026 Saifeddine Makhlouf</copyright>
     <managingEditor>saifeddine.ben.makhlouf@gmail.com (Saifeddine Makhlouf)</managingEditor>
@@ -17,7 +17,7 @@
     <ttl>1440</ttl>
 
     <item>
-      <title>Joined YOTSYSTEM as Full-Stack Developer</title>
+      <title>Joined YOTSYSTEM as Lead Full-Stack Developer</title>
       <link>https://saifeddine.tech/#experience</link>
       <guid isPermaLink="false">yotsystem-fullstack-2026-01</guid>
       <pubDate>Thu, 15 Jan 2026 09:00:00 +0100</pubDate>
