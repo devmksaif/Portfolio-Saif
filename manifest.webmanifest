@@ -28,7 +28,7 @@
   ],
   "shortcuts": [
     { "name": "View Projects",  "url": "/#projects",   "description": "Featured production builds" },
-    { "name": "Contact",        "url": "/#contact",    "description": "Hire / email / GitHub" },
+    { "name": "Contact",        "url": "/#contact",    "description": "Email / phone / GitHub" },
     { "name": "Experience",     "url": "/#experience", "description": "Career timeline" }
   ],
   "related_applications": [],

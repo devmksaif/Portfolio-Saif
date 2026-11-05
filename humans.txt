@@ -11,7 +11,7 @@
   Every freelance client who shipped something real
 
 /* SITE */
-  Last update: 2026-08-18
+  Last update: 2026-11-05
   Standards: HTML5, CSS3, ES2024, WebGL2, Schema.org, OpenGraph
   Components: Three.js r160, Bricolage Grotesque, Instrument Serif, JetBrains Mono
   IDE: VS Code, Cursor
