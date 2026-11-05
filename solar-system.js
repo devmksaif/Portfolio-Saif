@@ -7,6 +7,10 @@
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
 
+  // The render loop only runs while the scene is near the viewport.
+  let isVisible = false;
+  let wake = null;
+
   // Lazy-init: only build this WebGL scene when it scrolls near the viewport,
   // keeping it off the critical path at page load.
   let started = false;
@@ -53,9 +57,9 @@
   // planets
   const PLANETS = [
     { name: 'CALLIVERSE', radius: 4.5,  size: 0.55, speed: 0.42, color: 0x00d4ff, tilt: 0.05 },
-    { name: 'BLINK',      radius: 6.5,  size: 0.45, speed: 0.30, color: 0x7c3aed, tilt: 0.12 },
+    { name: 'BLINK',      radius: 6.5,  size: 0.45, speed: 0.30, color: 0x00d4ff, tilt: 0.12 },
     { name: 'CRAFTGENT',  radius: 8.5,  size: 0.70, speed: 0.22, color: 0xff2d92, tilt: 0.0  },
-    { name: 'JULIABOT',   radius: 11,   size: 0.85, speed: 0.16, color: 0x00d4ff, tilt: 0.08 },
+    { name: 'JULIABOT',   radius: 11,   size: 0.85, speed: 0.16, color: 0xff2d92, tilt: 0.08 },
     { name: 'ACTE',       radius: 13.5, size: 0.50, speed: 0.12, color: 0x7c3aed, tilt: 0.04 },
   ];
 
@@ -133,6 +137,7 @@
   });
 
   const clock = new THREE.Clock();
+  let running = false;
   function tick() {
     const t = clock.getElapsedTime();
     mx += (tmx - mx) * 0.04;
@@ -154,17 +159,30 @@
     starGlow.scale.setScalar(1 + Math.sin(t * 1.5) * 0.05);
 
     renderer.render(scene, camera);
-    if (!reduceMotion) requestAnimationFrame(tick);
+    if (!reduceMotion && isVisible) requestAnimationFrame(tick);
+    else running = false;
   }
-  tick();
+  wake = function () {
+    if (running || reduceMotion) return;
+    running = true;
+    tick();
+  };
+  if (reduceMotion) tick(); else wake();
+  }
+
+  // If WebGL or three.js is unavailable, drop the empty box: the HTML carries the content.
+  function start() {
+    try { init(); } catch (e) { host.hidden = true; }
   }
 
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(function (entries) {
-      if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); init(); }
+      isVisible = entries[entries.length - 1].isIntersecting;
+      if (isVisible) { start(); if (wake) wake(); }
     }, { rootMargin: '300px' });
     io.observe(host);
   } else {
-    init();
+    isVisible = true;
+    start();
   }
 })();

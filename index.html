@@ -101,7 +101,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="dns-prefetch" href="https://github.com" />
-<link rel="preload" as="style" href="styles.css" />
+<link rel="preload" as="style" href="styles.css?v=20261105" />
 
 <!-- ===== Fonts (async, non-render-blocking) ===== -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=JetBrains+Mono:wght@300;400;500;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" />
@@ -109,7 +109,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=JetBrains+Mono:wght@300;400;500;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" /></noscript>
 
 <!-- ===== Stylesheet ===== -->
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20261105" />
 
 <!-- ===== JSON-LD: Person (primary entity) ===== -->
 <script type="application/ld+json">
@@ -380,7 +380,7 @@
 <body itemscope itemtype="https://schema.org/Person">
 
 <!-- a11y skip-link (also helps SEO crawlers reach main content) -->
-<a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <!-- Hidden microdata stamps for crawlers (visual: hidden) -->
 <meta itemprop="name" content="Saifeddine Makhlouf" />
@@ -389,7 +389,7 @@
 <meta itemprop="email" content="saifeddine.ben.makhlouf@gmail.com" />
 <meta itemprop="telephone" content="+216-20-099-922" />
 
-<canvas id="three-canvas" role="img" aria-label="Interactive Three.js constellation of project nodes drifting through deep space — decorative background."></canvas>
+<canvas id="three-canvas" aria-hidden="true"></canvas>
 <div class="bg-grid" aria-hidden="true"></div>
 <div class="scroll-progress" id="scroll-bar" aria-hidden="true"></div>
 
@@ -405,7 +405,7 @@
     <li><a href="#skills">02 / Skills</a></li>
     <li><a href="#experience">03 / Work</a></li>
     <li><a href="#projects">04 / Projects</a></li>
-    <li><a href="#education">05 / Edu</a></li>
+    <li><a href="#education">05 / Education</a></li>
     <li><a href="#contact">06 / Contact</a></li>
   </ul>
   <div class="status"><span class="dot" style="width:6px;height:6px;background:#00d4ff;border-radius:50%;box-shadow:0 0 8px #00d4ff"></span> Open to EU roles</div>
@@ -434,7 +434,8 @@
     <div class="label">▸ Currently</div>
     <div><strong>Freelance Full-Stack &amp; GenAI Developer</strong></div>
     <div>Remote — worldwide · Open to EU product teams</div>
-    <div style="margin-top:10px;color:#4a526a">React · Node.js · TypeScript · React Native · PostgreSQL · GenAI</div>
+    <div style="margin-top:10px;color:var(--ink-faint)">React · Node.js · TypeScript · React Native · PostgreSQL · GenAI</div>
+    <a class="cta primary" href="#contact"><span>Contact me</span><span class="arrow">→</span></a>
   </div>
 
   <div class="scroll-hint">
@@ -469,10 +470,10 @@
 
 <!-- SKILLS -->
 <section id="skills" class="section" data-screen-label="03 Skills">
-  <div class="section-tag">02 — Technical Stack</div>
+  <div class="section-tag">02 — Skills</div>
 
   <div class="section-title">
-    <h2>Fifty things <span class="italic">I can</span><br/>build with.</h2>
+    <h2>Seventy-plus things <span class="italic">I can</span><br/>build with.</h2>
     <div class="desc">
       A spherical map of the technologies in active rotation. Drag the orb to explore — every label is a tool I've shipped to production, not learned in passing.
     </div>
@@ -482,7 +483,7 @@
     <div class="skills-3d-host" id="skills-3d">
       <div class="corner tl">⊹ TECH.SPHERE</div>
       <div class="corner tr">DRAG TO ROTATE</div>
-      <div class="corner bl">N=50</div>
+      <div class="corner bl">50 OF 72</div>
       <div class="corner br">v.2026</div>
     </div>
 
@@ -605,7 +606,7 @@
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section" data-screen-label="04 Experience">
-  <div class="section-tag">03 — Trajectory</div>
+  <div class="section-tag">03 — Work</div>
 
   <div class="section-title">
     <h2>Four years.<br/>Four <span class="italic">missions.</span></h2>
@@ -615,9 +616,19 @@
   <div class="timeline">
 
     <div class="exp">
+      <div class="when">APR 2022 <span class="now">— NOW</span></div>
+      <div>
+        <h3 class="role">Freelance Full-Stack &amp; GenAI Developer</h3>
+        <div class="company">Upwork / Fiverr <span class="loc">· Remote</span></div>
+        <div class="blurb">Delivered 20+ production projects for international clients across mobile, web, and SaaS. Featured projects detailed in the next section.</div>
+        <div class="stack"><span>React Native</span><span>Next.js</span><span>NestJS</span><span>Go</span><span>Supabase</span><span>OpenAI</span><span>Gemini</span><span>Stripe</span><span>WebRTC</span></div>
+      </div>
+    </div>
+
+    <div class="exp">
       <div class="when">JAN 2026 — JUL 2026</div>
       <div>
-        <div class="role">Full-Stack Developer</div>
+        <h3 class="role">Full-Stack Developer</h3>
         <div class="company">YOTSYSTEM <span class="loc">· Dubai, UAE (Hybrid)</span></div>
         <div class="blurb">Maritime tech company delivering AI-powered yacht management and digital transformation solutions.</div>
         <ul class="bullets">
@@ -637,7 +648,7 @@
     <div class="exp">
       <div class="when">FEB 2026 — JUN 2026</div>
       <div>
-        <div class="role">Software Engineering Intern (PFE)</div>
+        <h3 class="role">Software Engineering Intern (PFE)</h3>
         <div class="company">Cinebox <span class="loc">· Tunisia</span></div>
         <div class="blurb">Full-stack cinema ticket booking platform — customer front office and admin back office.</div>
         <ul class="bullets">
@@ -650,19 +661,9 @@
     </div>
 
     <div class="exp">
-      <div class="when">APR 2022 <span class="now">— NOW</span></div>
-      <div>
-        <div class="role">Freelance Full-Stack &amp; GenAI Developer</div>
-        <div class="company">Upwork / Fiverr <span class="loc">· Remote</span></div>
-        <div class="blurb">Delivered 20+ production projects for international clients across mobile, web, and SaaS. Featured projects detailed in the next section.</div>
-        <div class="stack"><span>React Native</span><span>Next.js</span><span>NestJS</span><span>Go</span><span>Supabase</span><span>OpenAI</span><span>Gemini</span><span>Stripe</span><span>WebRTC</span></div>
-      </div>
-    </div>
-
-    <div class="exp">
       <div class="when">JAN 2025 — FEB 2025</div>
       <div>
-        <div class="role">Software Engineering Intern</div>
+        <h3 class="role">Software Engineering Intern</h3>
         <div class="company">TOPNET <span class="loc">· Tunisia (Hybrid)</span></div>
         <div class="blurb">Designed and built a no-code chatbot builder platform from scratch.</div>
         <ul class="bullets">
@@ -679,17 +680,17 @@
 <!-- PROJECTS -->
 <section id="projects" class="projects-section" data-screen-label="05 Projects">
   <div class="projects-inner">
-    <div class="section-tag">04 — Featured Builds</div>
+    <div class="section-tag">04 — Projects</div>
 
     <div class="section-title">
       <h2>A small <span class="italic">solar system</span><br/>of shipped products.</h2>
-      <div class="desc">Five featured planets in active orbit. Each is a production app on Google Play, or a GenAI / SaaS platform serving real users and businesses.</div>
+      <div class="desc">Four live products and one in development: production apps on Google Play and GenAI / SaaS platforms serving real users and businesses.</div>
     </div>
   </div>
 
   <div class="solar-host" id="solar-3d">
     <div class="hud">▸ ORBIT.MAP / 5 PLANETS<span class="sub">drift speeds inversely proportional to launch year</span></div>
-    <div class="legend">CYAN — MOBILE / SOCIAL<br/>VIOLET — WEB / FINTECH<br/>MAGENTA — AI / SAAS</div>
+    <div class="legend">FEATURED PLANETS<br/>CYAN — MOBILE / SOCIAL<br/>VIOLET — WEB / FINTECH<br/>MAGENTA — AI / SAAS</div>
   </div>
 
   <div class="projects-inner">
@@ -712,7 +713,7 @@
 
       <div class="proj">
         <div class="num">P / 02</div>
-        <div class="planet" style="background:radial-gradient(circle at 30% 30%, #b095f7, #7c3aed 40%, #2a1259 100%)"></div>
+        <div class="planet" style="background:radial-gradient(circle at 30% 30%, #66e7ff, #00d4ff 40%, #003a4a 100%)"></div>
         <div class="kind">Grocery · Logistics</div>
         <h3>Blink Delivery</h3>
         <div class="desc">Cross-platform grocery delivery — live order tracking, multi-address delivery, coupon engine, and offline support. 2K+ downloads on Google Play.</div>
@@ -742,7 +743,7 @@
 
       <div class="proj">
         <div class="num">P / 04</div>
-        <div class="planet" style="background:radial-gradient(circle at 30% 30%, #66e7ff, #00d4ff 40%, #003a4a 100%)"></div>
+        <div class="planet" style="background:radial-gradient(circle at 30% 30%, #ff8ec1, #ff2d92 40%, #4a0a2c 100%)"></div>
         <div class="kind">Multi-Agent AI · SaaS</div>
         <h3>JuliaBot</h3>
         <div class="desc">Multi-agent GenAI platform with 7 specialised agents (Chat, Research, Medical, RAG, …), JWT-based RBAC, and 11-language i18n support.</div>
@@ -766,7 +767,7 @@
         </div>
         <div class="footer">
           <span>WIP · 2026</span>
-          <span class="live" style="color:#7c3aed">In Orbit</span>
+          <span class="live" style="color:#b095f7">In progress</span>
         </div>
       </div>
 
@@ -919,7 +920,7 @@
 
 <!-- EDUCATION + CERTS + LANGUAGES -->
 <section id="education" class="section" data-screen-label="06 Education">
-  <div class="section-tag">05 — Foundations</div>
+  <div class="section-tag">05 — Education</div>
 
   <div class="section-title">
     <h2>Education,<br/><span class="italic">accolades</span> &amp; tongues.</h2>
@@ -946,7 +947,7 @@
     <div class="col">
       <h3>▸ Certifications &amp; Awards</h3>
       <ul class="cert-list">
-        <li><div><span class="award">National Winner</span> — IEEE AI Challenge<br/><span style="color:#4a526a;font-size:10px;letter-spacing:0.1em;text-transform:uppercase">Cybersecurity &amp; Machine Learning</span></div></li>
+        <li><div><span class="award">National Winner</span> — IEEE AI Challenge<br/><span style="color:var(--ink-faint);font-size:10px;letter-spacing:0.1em;text-transform:uppercase">Cybersecurity &amp; Machine Learning</span></div></li>
         <li>Google Cloud Platform Fundamentals — Google</li>
         <li>Google Kubernetes Engine — Google</li>
         <li>React Native — Udemy</li>
@@ -979,7 +980,7 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact" data-screen-label="07 Contact" itemscope itemtype="https://schema.org/ContactPage">
-  <div class="section-tag">06 — End Transmission</div>
+  <div class="section-tag">06 — Contact</div>
 
   <h2>Let's build<br/>something <span class="italic">that lasts</span>.</h2>
 
@@ -1002,7 +1003,7 @@
         <span>Hire me</span><span class="arrow">→</span>
       </a>
       <a class="cta" href="mailto:saifeddine.ben.makhlouf@gmail.com">
-        <span>Email</span><span style="color:var(--ink-dim);text-transform:none;letter-spacing:0">saif…@gmail.com</span>
+        <span>Email</span><span style="color:var(--ink-dim);text-transform:none;letter-spacing:0;min-width:0;overflow-wrap:anywhere;text-align:right">saifeddine.ben.makhlouf<wbr/>@gmail.com</span>
       </a>
       <a class="cta" href="tel:+21620099922">
         <span>Phone</span><span style="color:var(--ink-dim);text-transform:none;letter-spacing:0">+216 20 099 922</span>
@@ -1010,8 +1011,8 @@
       <a class="cta" href="https://github.com/devmksaif" target="_blank" rel="noopener">
         <span>GitHub</span><span class="arrow">↗</span>
       </a>
-      <a class="cta" href="https://saifeddine.tech" target="_blank" rel="noopener">
-        <span>Portfolio</span><span class="arrow">↗</span>
+      <a class="cta" href="/fr/" hreflang="fr" lang="fr">
+        <span>Version française</span><span class="arrow">→</span>
       </a>
       <a class="cta" href="/cv.pdf" download="Saifeddine_Makhlouf_CV.pdf" target="_blank" rel="noopener">
         <span>Download CV</span><span class="arrow">↓</span>
@@ -1058,9 +1059,9 @@
 
 <!-- Three.js + scene scripts -->
 <script defer src="/vendor/three.min.js"></script>
-<script defer src="/three-scene.js"></script>
-<script defer src="/skills-sphere.js"></script>
-<script defer src="/solar-system.js"></script>
+<script defer src="/three-scene.js?v=20261105"></script>
+<script defer src="/skills-sphere.js?v=20261105"></script>
+<script defer src="/solar-system.js?v=20261105"></script>
 
 </body>
 </html>

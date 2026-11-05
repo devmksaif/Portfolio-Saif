@@ -13,6 +13,16 @@
   const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
   const pd = isMobile ? 0.4 : 1; // particle-density scale on small screens
 
+  // ---- Scroll progress (kept outside init so the bar still works without WebGL) ----
+  let scrollTargetT = 0;
+  function updateScroll() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    scrollTargetT = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    const bar = document.getElementById('scroll-bar');
+    if (bar) bar.style.transform = 'scaleX(' + scrollTargetT + ')';
+  }
+  window.addEventListener('scroll', updateScroll, { passive: true });
+
   function init() {
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
@@ -149,17 +159,8 @@
     mouse.ty = (e.clientY / window.innerHeight - 0.5) * 2;
   });
 
-  // ---- Scroll progress ----
+  // ---- Smoothed scroll position ----
   let scrollT = 0;
-  let scrollTargetT = 0;
-  function updateScroll() {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    scrollTargetT = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-    const bar = document.getElementById('scroll-bar');
-    if (bar) bar.style.width = (scrollTargetT * 100) + '%';
-  }
-  window.addEventListener('scroll', updateScroll, { passive: true });
-  updateScroll();
 
   // ---- Resize ----
   window.addEventListener('resize', () => {
@@ -225,6 +226,10 @@
 
   // Defer heavy WebGL init until the main thread is idle so the hero text
   // paints first (better FCP/LCP). Reduced-motion users get one static frame.
-  if ('requestIdleCallback' in window) { requestIdleCallback(init, { timeout: 1500 }); }
-  else { setTimeout(init, 200); }
+  function start() {
+    updateScroll();
+    try { init(); } catch (e) { canvas.hidden = true; }
+  }
+  if ('requestIdleCallback' in window) { requestIdleCallback(start, { timeout: 1500 }); }
+  else { setTimeout(start, 200); }
 })();
